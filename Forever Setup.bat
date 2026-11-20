@@ -42,5 +42,21 @@ try {
     Remove-Item -Recurse -Force -LiteralPath $Temp -ErrorAction SilentlyContinue
 }
 Write-Host "Setup files, with Update.bat and Uninstall.bat: $Folder"
+# Already set up in a game (the game folder saved beside this file, with the installer's answers in it): offer both
+# tools instead of going through the install. Update.bat is the latest of what is there; Install.ps1 is new features.
+$gameFile = Join-Path $Folder 'game-folder.txt'
+$Game = if (Test-Path -LiteralPath $gameFile) { (Get-Content -LiteralPath $gameFile -TotalCount 1).Trim() } else { '' }
+if ($Game -and (Test-Path -LiteralPath (Join-Path $Game 'PetreSetup-backup\choices.txt'))) {
+    Write-Host ''
+    Write-Host 'Forever is already set up in your game.' -ForegroundColor Green
+    Write-Host '  U  Update: the newest version of what you have. Your settings are not touched.'
+    Write-Host '  I  Install: the installer again, for new features and new questions.'
+    if ((Read-Host 'Update or Install? [U]') -match '^\s*[iI]') {
+        & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Folder 'Install.ps1')
+    } else {
+        & cmd /c (Join-Path $Folder 'Update.bat')
+    }
+    exit $LASTEXITCODE
+}
 & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Folder 'Install.ps1')
 exit $LASTEXITCODE
