@@ -16,7 +16,7 @@
     <p class="lede">A set of addons for the <code>_forever_</code> client, the small helper addons made to tie them together, and settings tuned to work as one. One download, a few questions, and the CurseForge app does the rest.</p>
     <p class="meta">Version <!-- gen:version -->1.2.6<!-- /gen:version --> &middot; <!-- gen:addoncount -->66<!-- /gen:addoncount --> addons &middot; <!-- gen:helpercount -->30<!-- /gen:helpercount --> setup helpers</p>
     <nav aria-label="Sections">
-      <a href="#choose">Download</a><a href="#installed">Already installed?</a><a href="#inside">What's inside</a><a href="#helpers">Helpers</a><a href="#journey">Journey page</a><a href="#faq">Questions</a><a href="#new">What's new</a><a href="#help">Help</a>
+      <a href="#choose">Download</a><a href="#journey">Journey page</a><a href="#installed">Already installed?</a><a href="#inside">What's inside</a><a href="#helpers">Helpers</a><a href="#faq">Questions</a><a href="#new">What's new</a><a href="#help">Help</a>
     </nav>
   </div>
 </header>
@@ -87,6 +87,36 @@
   </ol>
 </section>
 
+<section id="journey" class="showcase">
+  <div class="show-text">
+    <p class="eyebrow">Made for this setup</p>
+    <h2>Your journey, as a story</h2>
+    <p>Every character gets one long web page of its adventure: the route on the map, each day played, levels, deaths and close calls, quests, dungeons with their bosses and loot, the people you met, professions, gold, photos of your moments and a closing epilogue.</p>
+    <p class="small">Built on your PC from what the addons below record while you play; nothing is uploaded. Run <b>Build Journey.bat</b> in the game's <code>Journey</code> folder. <b>Journey only</b> brings just these addons and keeps the rest of your own setup.</p>
+    <p class="show-cta"><a class="btn" href="journey-example.html" target="_blank" rel="noopener">Open the example page</a> <span class="small">Made-up data: 60 days of an invented Tauren Shaman. About 11 MB.</span></p>
+  </div>
+  <a class="show-shot" href="journey-example.html" target="_blank" rel="noopener" aria-label="Open the example Journey page"><img src="journey-preview.jpg" alt="The top of an example Journey page: Tahu's Journey, 60 days, level 1 to 60, with highlight cards for the first quest, a finished quest chain and the first death." width="1280" height="800" loading="lazy"></a>
+  <details class="sources-fold">
+    <summary>What each addon adds to the page</summary>
+    <ul class="sources">
+<!-- gen:journey --><li><b>Social Diary</b><span>route, days, levels, deaths, quests, people, PvP</span></li>
+<li><b>Journey Icons</b><span>icons, map art, professions, gold, reputation, guild</span></li>
+<li><b>BiS&gt;Memories</b><span>photos, gear worn, new-gear lines</span></li>
+<li><b>Leatrix Maps</b><span>explored areas on the zone maps (kept switched off)</span></li>
+<li><b>Dungeon Journal</b><span>dungeon run cards, boss portraits, flight times</span></li>
+<li><b>Profession journals</b><span>catches, journal firsts, badges, legends</span></li>
+<li><b>Weather</b><span>rain you travelled through</span></li>
+<li><b>Lore Forever</b><span>lore uncovered, questions asked, zone visits</span></li>
+<li><b>Spoken</b><span>places, stories and books you heard</span></li>
+<li><b>Questie</b><span>quests taken and turned in</span></li>
+<li><b>Auctionator</b><span>auction house listings and sales</span></li>
+<li><b>BagBrother</b><span>gold and bags of every character</span></li>
+<li><b>Manners</b><span>buffs given and returned</span></li>
+<li><b>Menagerie</b><span>creature cards, battles, expeditions</span></li><!-- /gen:journey -->
+    </ul>
+  </details>
+</section>
+
 <section id="installed">
   <h2>Already installed?</h2>
   <p class="intro">These buttons start the tools in your <b>Forever Setup</b> folder. Your browser asks first; allow it to open <i>Windows PowerShell</i>.</p>
@@ -103,294 +133,306 @@
 
 <section id="inside">
   <h2>What's inside</h2>
-  <p class="intro">The setup is made of parts. Full experience brings every part except the optional ones; the look-and-feel questions add the compass, nameplate and camera parts. Open a part to see its addons and what each one does. <span class="tag own">setup helper</span> marks the small addons made for this setup.</p>
-<!-- gen:parts --><details class="part" id="part-core">
-  <summary><span class="part-name">Core</span><span class="part-about">Cinematic look, chat, dialogue, unit frames (always)</span><span class="count">14 addons</span></summary>
+  <p class="intro">The setup comes in parts. Open one to see its addons and which setups bring it.</p>
+<div class="tiles">
+<!-- gen:parts --><details class="tile" id="part-core">
+  <summary><span class="t-head"><span class="t-name">Core</span><span class="t-count">14</span></span><span class="gist">Cinematic look, chat, dialogue, unit frames (always)</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>BugGrabber</b> catches addon errors quietly (for BugSack)</li>
-    <li><b>BugSack</b> shows caught addon errors when you ask, instead of pop-ups</li>
-    <li><b>Cinematic</b> the main look: UI fades between fights, cinematic cameras, letterbox, weather</li>
-    <li><b>Dialogue UI</b> quest and NPC talk as a cinematic dialogue</li>
-    <li><b>Glass Forever</b> minimal chat that fades when quiet</li>
-    <li><b>Hide Anything - Forever</b> hides the game frames this setup replaces (minimap, target frame...)</li>
-    <li><b>Leatrix Plus</b> many small quality-of-life options</li>
-    <li><b>MinimapButtonButton</b> collects addon minimap buttons into one button</li>
-    <li><b>RPGLootFeed</b> a small feed of what you just looted</li>
-    <li><b>Mouse Over Tooltip</b> a minimal unit tooltip on mouseover</li>
-    <li class="own"><b>First Login Setup</b> <span class="tag own">setup helper</span> Sets the game options and addon profiles the installer picked, once on each character.</li>
-    <li class="own"><b>Forever Settings</b> <span class="tag own">setup helper</span> Options &gt; AddOns &gt; Forever Settings: every helper&#39;s options on pages (this character, compass, nameplates, map and photos, interface), and per addon the setup&#39;s settings or your own.</li>
-    <li class="own"><b>Forever Tweaks</b> <span class="tag own">setup helper</span> Small fixes to the game&#39;s own frames: cards above Cinematic, the player frame while you eat, Glass&#39;s edit box, combat state text, corpse plates and raid frame health. Each part switches off per character in Forever Settings.</li>
-    <li class="own"><b>Minimap Button Groups</b> <span class="tag own">setup helper</span> Sorts MinimapButtonButton&#39;s buttons into folders: Journals &amp; story, Map &amp; world, Look &amp; sound, Tools. Right click a folder to move any button. Shows MinimapButtonButton&#39;s button only while the mouse is on it or its list is open.</li>
+    <li><b>BugGrabber</b><span>catches addon errors quietly (for BugSack)</span></li>
+    <li><b>BugSack</b><span>shows caught addon errors when you ask, instead of pop-ups</span></li>
+    <li><b>Cinematic</b><span>the main look: UI fades between fights, cinematic cameras, letterbox, weather</span></li>
+    <li><b>Dialogue UI</b><span>quest and NPC talk as a cinematic dialogue</span></li>
+    <li><b>Glass Forever</b><span>minimal chat that fades when quiet</span></li>
+    <li><b>Hide Anything - Forever</b><span>hides the game frames this setup replaces (minimap, target frame...)</span></li>
+    <li><b>Leatrix Plus</b><span>many small quality-of-life options</span></li>
+    <li><b>MinimapButtonButton</b><span>collects addon minimap buttons into one button</span></li>
+    <li><b>RPGLootFeed</b><span>a small feed of what you just looted</span></li>
+    <li><b>Mouse Over Tooltip</b><span>a minimal unit tooltip on mouseover</span></li>
+    <li><b>First Login Setup <i class="own">helper</i></b><span>Sets the game options and addon profiles the installer picked, once on each character.</span></li>
+    <li><b>Forever Settings <i class="own">helper</i></b><span>Options &gt; AddOns &gt; Forever Settings: every helper&#39;s options on pages (this character, compass, nameplates, map and photos, interface), and per addon the setup&#39;s settings or your own.</span></li>
+    <li><b>Forever Tweaks <i class="own">helper</i></b><span>Small fixes to the game&#39;s own frames: cards above Cinematic, the player frame while you eat, Glass&#39;s edit box, combat state text, corpse plates and raid frame health.</span></li>
+    <li><b>Minimap Button Groups <i class="own">helper</i></b><span>Sorts MinimapButtonButton&#39;s buttons into folders: Journals &amp; story, Map &amp; world, Look &amp; sound, Tools.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-action-bars">
-  <summary><span class="part-name">Action bars</span><span class="part-about">Bartender4 bars that fade with Cinematic</span><span class="count">2 addons</span></summary>
+<details class="tile" id="part-action-bars">
+  <summary><span class="t-head"><span class="t-name">Action bars</span><span class="t-count">2</span></span><span class="gist">Bartender4 bars that fade with Cinematic</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Bartender4</b> action bars, laid out for this setup</li>
-    <li class="own"><b>Bartender Cine Hover</b> <span class="tag own">setup helper</span> Lets Cinematic&#39;s mouseover bring back faded Bartender4 bars, whose own frames are only 1x1.</li>
+    <li><b>Bartender4</b><span>action bars, laid out for this setup</span></li>
+    <li><b>Bartender Cine Hover <i class="own">helper</i></b><span>Lets Cinematic&#39;s mouseover bring back faded Bartender4 bars, whose own frames are only 1x1.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-quests-map">
-  <summary><span class="part-name">Quests &amp; map</span><span class="part-about">Questie, OpenMap, Dungeon Journal, library books</span><span class="count">6 addons</span></summary>
+<details class="tile" id="part-quests-map">
+  <summary><span class="t-head"><span class="t-name">Quests &amp; map</span><span class="t-count">6</span></span><span class="gist">Questie, OpenMap, Dungeon Journal, library books</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>DungeonJournal</b> boss, loot and quest journal for dungeons</li>
-    <li><b>Librarian Books Forever</b> tracks the 40 library books: which you still need and where they are (/librarian)</li>
-    <li><b>OpenMap</b> one seamless world map, every zone stitched together</li>
-    <li><b>Questie</b> quest helper: givers, objectives and turn-ins on the map</li>
-    <li><b>QuestieDB</b> the quest database Questie reads</li>
-    <li class="own"><b>Map Plus</b> <span class="tag own">setup helper</span> Extras for the world map: drag OpenMap with Cinematic&#39;s camera, dungeon maps from the Forever Dungeon Journal, Questie pins on the world map, and townsfolk icons hidden until you explore their area. Each part switches off per character in Forever Settings.</li>
+    <li><b>DungeonJournal</b><span>boss, loot and quest journal for dungeons</span></li>
+    <li><b>Librarian Books Forever</b><span>tracks the 40 library books: which you still need and where they are (/librarian)</span></li>
+    <li><b>OpenMap</b><span>one seamless world map, every zone stitched together</span></li>
+    <li><b>Questie</b><span>quest helper: givers, objectives and turn-ins on the map</span></li>
+    <li><b>QuestieDB</b><span>the quest database Questie reads</span></li>
+    <li><b>Map Plus <i class="own">helper</i></b><span>Extras for the world map: drag OpenMap with Cinematic&#39;s camera, dungeon maps from the Forever Dungeon Journal, Questie pins on the world map, and townsfolk icons hidden until you explore their area.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-atlas">
-  <summary><span class="part-name">Atlas</span><span class="part-about">dungeon and raid maps (optional)</span><span class="count">5 addons</span></summary>
+<details class="tile" id="part-atlas">
+  <summary><span class="t-head"><span class="t-name">Atlas</span><span class="t-count">5</span></span><span class="gist">dungeon and raid maps (optional)</span></summary>
+  <div class="more">
   <p class="why">Optional: five addon folders and about 0.3 seconds more loading when you log in. Dungeon Journal already shows dungeon maps and loot.</p>
-  <p class="in">In: <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Atlas</b> dungeon and raid maps with their bosses and loot</li>
-    <li><b>Atlas Kalimdor &amp; Eastern Kingdoms</b> Atlas maps: the classic dungeons and raids</li>
-    <li><b>Atlas Battlegrounds</b> Atlas maps: battlegrounds</li>
-    <li><b>Atlas Dungeon Locations</b> Atlas maps: where each dungeon entrance is</li>
-    <li><b>Atlas Transportation</b> Atlas maps: flight paths, boats and zeppelins</li>
+    <li><b>Atlas</b><span>dungeon and raid maps with their bosses and loot</span></li>
+    <li><b>Atlas Kalimdor &amp; Eastern Kingdoms</b><span>Atlas maps: the classic dungeons and raids</span></li>
+    <li><b>Atlas Battlegrounds</b><span>Atlas maps: battlegrounds</span></li>
+    <li><b>Atlas Dungeon Locations</b><span>Atlas maps: where each dungeon entrance is</span></li>
+    <li><b>Atlas Transportation</b><span>Atlas maps: flight paths, boats and zeppelins</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-gathering">
-  <summary><span class="part-name">Gathering</span><span class="part-about">herbs and ore: sparkles and glow nearby</span><span class="count">2 addons</span></summary>
+<details class="tile" id="part-gathering">
+  <summary><span class="t-head"><span class="t-name">Gathering</span><span class="t-count">2</span></span><span class="gist">herbs and ore: sparkles and glow nearby</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Lueur</b> herbs, ore, chests and quest objects glow as you approach; minimap node icons</li>
-    <li><b>Node Sight</b> gold sparkles on nearby herbs and ore; skill needed in tooltips</li>
+    <li><b>Lueur</b><span>herbs, ore, chests and quest objects glow as you approach; minimap node icons</span></li>
+    <li><b>Node Sight</b><span>gold sparkles on nearby herbs and ore; skill needed in tooltips</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-profession-journals">
-  <summary><span class="part-name">Profession journals</span><span class="part-about">Pagle for fishing and a journal for each profession</span><span class="count">12 addons</span></summary>
+<details class="tile" id="part-profession-journals">
+  <summary><span class="t-head"><span class="t-name">Profession journals</span><span class="t-count">12</span></span><span class="gist">Pagle for fishing and a journal for each profession</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Pagle</b> fishing: progress, a catch collection, goals and a one-key fishing button</li>
-    <li class="own"><b>Awlmanac</b> <span class="tag own">setup helper</span> A leatherworker&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /awlmanac, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Clothbound</b> <span class="tag own">setup helper</span> A tailor&#39;s journal. Every piece you sew is written down; first kinds, new pieces, titles and badges get a paper toast, and /clothbound, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Cogitations</b> <span class="tag own">setup helper</span> An engineer&#39;s journal. Every build you make is written down; first kinds, new builds, titles and badges get a paper toast, and /cogitations, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Elixicon</b> <span class="tag own">setup helper</span> An alchemist&#39;s journal. Every potion, elixir and flask you brew is written down; first kinds, new brews, titles and badges get a paper toast, and /elixicon, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Forgery</b> <span class="tag own">setup helper</span> A blacksmith&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /forgery, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Gauzette</b> <span class="tag own">setup helper</span> A medic&#39;s journal. Every bandage and remedy you make is written down; first kinds, new makes, titles and badges get a paper toast, and /gauzette, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Hidebound</b> <span class="tag own">setup helper</span> A skinner&#39;s journal. Every beast you skin is written down; first kinds of beast, new hides, titles and badges get a paper toast, and /hidebound, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Motherlode</b> <span class="tag own">setup helper</span> A miner&#39;s journal. Every vein you strike is written down; first veins, new gems, titles and badges get a short toast, and /motherlode (or a key binding) opens the book. A minimap button opens it too.</li>
-    <li class="own"><b>Potluck</b> <span class="tag own">setup helper</span> A cook&#39;s journal. Every dish you cook is written down; first kinds, new dishes, titles and badges get a paper toast, and /potluck, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Spellbound</b> <span class="tag own">setup helper</span> An enchanter&#39;s journal. Every enchant, make and disenchant is written down; first kinds, new finds, titles and badges get a paper toast, and /spellbound, a key binding or the minimap button opens the book.</li>
-    <li class="own"><b>Thymeline</b> <span class="tag own">setup helper</span> A herbalist&#39;s journal. Every herb you pick is written down; first herbs, new pressings, titles and badges get a paper toast, and /thymeline, a key binding or the minimap button opens the book.</li>
+    <li><b>Pagle</b><span>fishing: progress, a catch collection, goals and a one-key fishing button</span></li>
+    <li><b>Awlmanac <i class="own">helper</i></b><span>A leatherworker&#39;s journal.</span></li>
+    <li><b>Clothbound <i class="own">helper</i></b><span>A tailor&#39;s journal.</span></li>
+    <li><b>Cogitations <i class="own">helper</i></b><span>An engineer&#39;s journal.</span></li>
+    <li><b>Elixicon <i class="own">helper</i></b><span>An alchemist&#39;s journal.</span></li>
+    <li><b>Forgery <i class="own">helper</i></b><span>A blacksmith&#39;s journal.</span></li>
+    <li><b>Gauzette <i class="own">helper</i></b><span>A medic&#39;s journal.</span></li>
+    <li><b>Hidebound <i class="own">helper</i></b><span>A skinner&#39;s journal.</span></li>
+    <li><b>Motherlode <i class="own">helper</i></b><span>A miner&#39;s journal.</span></li>
+    <li><b>Potluck <i class="own">helper</i></b><span>A cook&#39;s journal.</span></li>
+    <li><b>Spellbound <i class="own">helper</i></b><span>An enchanter&#39;s journal.</span></li>
+    <li><b>Thymeline <i class="own">helper</i></b><span>A herbalist&#39;s journal.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-bags-auction">
-  <summary><span class="part-name">Bags &amp; auction</span><span class="part-about">Bagnon bags, Auctionator</span><span class="count">4 addons</span></summary>
+<details class="tile" id="part-bags-auction">
+  <summary><span class="t-head"><span class="t-name">Bags &amp; auction</span><span class="t-count">4</span></span><span class="gist">Bagnon bags, Auctionator</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Auctionator</b> auction house: fast search, price history, quick selling</li>
-    <li><b>Bagnon</b> all your bags in one window</li>
-    <li><b>Bagnon Battles</b> a backpack auto-battler mini-game inside Bagnon</li>
-    <li><b>BagBrother</b> remembers each character&#39;s gold and bags (Bagnon brings it too)</li>
+    <li><b>Auctionator</b><span>auction house: fast search, price history, quick selling</span></li>
+    <li><b>Bagnon</b><span>all your bags in one window</span></li>
+    <li><b>Bagnon Battles</b><span>a backpack auto-battler mini-game inside Bagnon</span></li>
+    <li><b>BagBrother</b><span>remembers each character&#39;s gold and bags (Bagnon brings it too)</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-whisper-windows">
-  <summary><span class="part-name">Whisper windows</span><span class="part-about">whispers open as their own chat windows (WIM)</span><span class="count">2 addons</span></summary>
+<details class="tile" id="part-whisper-windows">
+  <summary><span class="t-head"><span class="t-name">Whisper windows</span><span class="t-count">2</span></span><span class="gist">whispers open as their own chat windows (WIM)</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>WIM</b> whispers open as their own chat windows, like a messenger</li>
-    <li class="own"><b>WIM Bag Button</b> <span class="tag own">setup helper</span> A WIM button right of the Bartender4 bag bar (or on screen without Bartender4), since WIM&#39;s own button sits on the hidden minimap. Keeps whispers in WIM by turning off Glass&#39;s whisper windows and whisper tabs.</li>
+    <li><b>WIM</b><span>whispers open as their own chat windows, like a messenger</span></li>
+    <li><b>WIM Bag Button <i class="own">helper</i></b><span>A WIM button right of the Bartender4 bag bar (or on screen without Bartender4), since WIM&#39;s own button sits on the hidden minimap.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-journey-memories">
-  <summary><span class="part-name">Journey &amp; memories</span><span class="part-about">Social Diary, memory photos, Journey story pages</span><span class="count">5 addons</span></summary>
+<details class="tile" id="part-journey-memories">
+  <summary><span class="t-head"><span class="t-name">Journey &amp; memories</span><span class="t-count">5</span></span><span class="gist">Social Diary, memory photos, Journey story pages</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>BiS&gt;Memories</b> a screenshot and a note when something worth remembering happens</li>
-    <li><b>Leatrix Maps</b> only its map of explored areas, for the Journey pages; installed switched off (OpenMap is the map)</li>
-    <li><b>Social Diary</b> remembers the people you meet in the open world</li>
-    <li class="own"><b>Journey Icons</b> <span class="tag own">setup helper</span> Records the icon file of every item and class in Social Diary and BiS Memories, plus item names, race and faction, dungeon boss portraits and the route&#39;s map art, and logs profession milestones, plus the fish Pagle counted, your guild (members, changes, event log, news), your gold and reputation over time, the quests in your log, what you craft, skin, mine and pick, your jumps, hearthstone uses and repair bills, and the gear you wear with its enchants, for the Journey story page. Shows nothing in game.</li>
-    <li class="own"><b>Memories Plus</b> <span class="tag own">setup helper</span> Extras for BiS&gt;Memories: a faster album page, Cinematic&#39;s look kept in photos, and a photo when Social Diary greets someone again. Each part switches off per character in Forever Settings.</li>
+    <li><b>BiS&gt;Memories</b><span>a screenshot and a note when something worth remembering happens</span></li>
+    <li><b>Leatrix Maps</b><span>only its map of explored areas, for the Journey pages; installed switched off (OpenMap is the map)</span></li>
+    <li><b>Social Diary</b><span>remembers the people you meet in the open world</span></li>
+    <li><b>Journey Icons <i class="own">helper</i></b><span>Records the icon file of every item and class in Social Diary and BiS Memories, plus item names, race and faction, dungeon boss portraits and the route&#39;s map art, and logs profession milestones, plus the fish Pagle counted, your guild (members, changes, event log, news), your gold and reputation over time, the quests in your log, what you craft, skin, mine and pick, your jumps, hearthstone uses and repair bills, and the gear you wear with its enchants, for the Journey story page.</span></li>
+    <li><b>Memories Plus <i class="own">helper</i></b><span>Extras for BiS&gt;Memories: a faster album page, Cinematic&#39;s look kept in photos, and a photo when Social Diary greets someone again.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-atmosphere">
-  <summary><span class="part-name">Atmosphere</span><span class="part-about">more music, weather, campfires</span><span class="count">4 addons</span></summary>
+<details class="tile" id="part-atmosphere">
+  <summary><span class="t-head"><span class="t-name">Atmosphere</span><span class="t-count">4</span></span><span class="gist">more music, weather, campfires</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>CozyFire</b> marks campfires on the map; camp object tooltips</li>
-    <li><b>Forever Ambient Music Extended</b> more music from every WoW era, fitted to where you are</li>
-    <li><b>Weather</b> weather ambience indoors and accessory reminders</li>
-    <li class="own"><b>Weather Button Bridge</b> <span class="tag own">setup helper</span> Puts Weather&#39;s forecast button into MinimapButtonButton, which can&#39;t collect Weather&#39;s own unnamed button.</li>
+    <li><b>CozyFire</b><span>marks campfires on the map; camp object tooltips</span></li>
+    <li><b>Forever Ambient Music Extended</b><span>more music from every WoW era, fitted to where you are</span></li>
+    <li><b>Weather</b><span>weather ambience indoors and accessory reminders</span></li>
+    <li><b>Weather Button Bridge <i class="own">helper</i></b><span>Puts Weather&#39;s forecast button into MinimapButtonButton, which can&#39;t collect Weather&#39;s own unnamed button.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-spoken">
-  <summary><span class="part-name">Spoken</span><span class="part-about">quests, books and places read aloud (over 1 GB to download)</span><span class="count">10 addons</span></summary>
+<details class="tile" id="part-spoken">
+  <summary><span class="t-head"><span class="t-name">Spoken</span><span class="t-count">10</span></span><span class="gist">quests, books and places read aloud (over 1 GB to download)</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Narration only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Narration only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Spoken: English</b> Spoken: the English voice packs, all in one</li>
-    <li><b>Spoken</b> reads quests, gossip, places and books aloud</li>
-    <li><b>Spoken Audio: Quests - All</b> Spoken voices: quests (all)</li>
-    <li><b>Spoken Audio: Quests - Alliance</b> Spoken voices: Alliance quests</li>
-    <li><b>Spoken Audio: Quests - Horde</b> Spoken voices: Horde quests</li>
-    <li><b>Spoken Audio: Quests - Shared</b> Spoken voices: shared quests</li>
-    <li><b>Spoken Audio: Gossip</b> Spoken voices: gossip</li>
-    <li><b>Spoken Audio: Places</b> Spoken voices: places</li>
-    <li><b>Spoken Audio: Readables</b> Spoken voices: books and letters</li>
-    <li class="own"><b>Spoken + Lore Forever Bridge</b> <span class="tag own">setup helper</span> Keeps Spoken and Lore Forever from talking over each other, and shows Lore Forever&#39;s chat hints on screen while chat is faded.</li>
+    <li><b>Spoken: English</b><span>Spoken: the English voice packs, all in one</span></li>
+    <li><b>Spoken</b><span>reads quests, gossip, places and books aloud</span></li>
+    <li><b>Spoken Audio: Quests - All</b><span>Spoken voices: quests (all)</span></li>
+    <li><b>Spoken Audio: Quests - Alliance</b><span>Spoken voices: Alliance quests</span></li>
+    <li><b>Spoken Audio: Quests - Horde</b><span>Spoken voices: Horde quests</span></li>
+    <li><b>Spoken Audio: Quests - Shared</b><span>Spoken voices: shared quests</span></li>
+    <li><b>Spoken Audio: Gossip</b><span>Spoken voices: gossip</span></li>
+    <li><b>Spoken Audio: Places</b><span>Spoken voices: places</span></li>
+    <li><b>Spoken Audio: Readables</b><span>Spoken voices: books and letters</span></li>
+    <li><b>Spoken + Lore Forever Bridge <i class="own">helper</i></b><span>Keeps Spoken and Lore Forever from talking over each other, and shows Lore Forever&#39;s chat hints on screen while chat is faded.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-lore-forever">
-  <summary><span class="part-name">Lore Forever</span><span class="part-about">a narrator for lore (optional: large, slower login)</span><span class="count">5 addons</span></summary>
+<details class="tile" id="part-lore-forever">
+  <summary><span class="t-head"><span class="t-name">Lore Forever</span><span class="t-count">5</span></span><span class="gist">a narrator for lore (optional: large, slower login)</span></summary>
+  <div class="more">
   <p class="why">Optional: the slowest addon of the setup, about 2 seconds more loading when you log in, and large (about 190 MB, plus voice packs from its website).</p>
-  <p class="in">In: <span class="tag">Narration only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Narration only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Lore Forever</b> narrated lore of the zones, quests, people and items around you</li>
-    <li><b>Lore Forever - Female Narrator</b> Lore Forever: the female narrator voice</li>
-    <li><b>Lore Forever - Female Narrator (Horde lands)</b> female narrator: Horde lands</li>
-    <li><b>Lore Forever - Female Narrator: More People</b> female narrator: more people</li>
-    <li><b>Lore Forever - Female Narrator: More Places</b> female narrator: more places</li>
+    <li><b>Lore Forever</b><span>narrated lore of the zones, quests, people and items around you</span></li>
+    <li><b>Lore Forever - Female Narrator</b><span>Lore Forever: the female narrator voice</span></li>
+    <li><b>Lore Forever - Female Narrator (Horde lands)</b><span>female narrator: Horde lands</span></li>
+    <li><b>Lore Forever - Female Narrator: More People</b><span>female narrator: more people</span></li>
+    <li><b>Lore Forever - Female Narrator: More Places</b><span>female narrator: more places</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-extras">
-  <summary><span class="part-name">Extras</span><span class="part-about">Narcissus character screen, Menagerie card binder, Manners buffs, Recipe List</span><span class="count">13 addons</span></summary>
+<details class="tile" id="part-extras">
+  <summary><span class="t-head"><span class="t-name">Extras</span><span class="t-count">13</span></span><span class="gist">Narcissus character screen, Menagerie card binder, Manners buffs, Recipe List</span></summary>
+  <div class="more">
   <p class="why">Menagerie only brings just Menagerie from this part.</p>
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Menagerie only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Menagerie only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Narcissus</b> an immersive character screen and photo studio (/narci); about 0.6 seconds more loading at login</li>
-    <li><b>Manners</b> one click buffs back whoever buffed you, and passers-by missing your buff; the Journey page reads its favour ledger</li>
-    <li><b>Ackis Recipe List</b> lists every recipe of your professions, known or not, and where to learn it (/arl)</li>
-    <li><b>Ackis Recipe List: Alchemy</b> Recipe List: alchemy recipes</li>
-    <li><b>Ackis Recipe List: Blacksmithing</b> Recipe List: blacksmithing recipes</li>
-    <li><b>Ackis Recipe List: Cooking</b> Recipe List: cooking recipes</li>
-    <li><b>Ackis Recipe List: Enchanting</b> Recipe List: enchanting recipes</li>
-    <li><b>Ackis Recipe List: Engineering</b> Recipe List: engineering recipes</li>
-    <li><b>Ackis Recipe List: First Aid</b> Recipe List: first aid recipes</li>
-    <li><b>Ackis Recipe List: Leatherworking</b> Recipe List: leatherworking recipes</li>
-    <li><b>Ackis Recipe List: Mining</b> Recipe List: mining (smelting) recipes</li>
-    <li><b>Ackis Recipe List: Tailoring</b> Recipe List: tailoring recipes</li>
-    <li class="own"><b>Menagerie</b> <span class="tag own">setup helper</span> A card binder for the creatures and people of Azeroth. Kills can drop a creature&#39;s card, meeting someone can earn theirs, and playing fills a bar toward packs. /menagerie opens the binder.</li>
+    <li><b>Narcissus</b><span>an immersive character screen and photo studio (/narci); about 0.6 seconds more loading at login</span></li>
+    <li><b>Manners</b><span>one click buffs back whoever buffed you, and passers-by missing your buff; the Journey page reads its favour ledger</span></li>
+    <li><b>Ackis Recipe List</b><span>lists every recipe of your professions, known or not, and where to learn it (/arl)</span></li>
+    <li><b>Ackis Recipe List: Alchemy</b><span>Recipe List: alchemy recipes</span></li>
+    <li><b>Ackis Recipe List: Blacksmithing</b><span>Recipe List: blacksmithing recipes</span></li>
+    <li><b>Ackis Recipe List: Cooking</b><span>Recipe List: cooking recipes</span></li>
+    <li><b>Ackis Recipe List: Enchanting</b><span>Recipe List: enchanting recipes</span></li>
+    <li><b>Ackis Recipe List: Engineering</b><span>Recipe List: engineering recipes</span></li>
+    <li><b>Ackis Recipe List: First Aid</b><span>Recipe List: first aid recipes</span></li>
+    <li><b>Ackis Recipe List: Leatherworking</b><span>Recipe List: leatherworking recipes</span></li>
+    <li><b>Ackis Recipe List: Mining</b><span>Recipe List: mining (smelting) recipes</span></li>
+    <li><b>Ackis Recipe List: Tailoring</b><span>Recipe List: tailoring recipes</span></li>
+    <li><b>Menagerie <i class="own">helper</i></b><span>A card binder for the creatures and people of Azeroth.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-compass-minimap-hidden">
-  <summary><span class="part-name">Compass, minimap hidden</span><span class="part-about">With the compass and no minimap (the Exploration question): herb and ore memory for the compass, and the zone name, clock and mail icon moved out of the hidden minimap.</span><span class="count">3 addons</span></summary>
+<details class="tile" id="part-compass-minimap-hidden">
+  <summary><span class="t-head"><span class="t-name">Compass, minimap hidden</span><span class="t-count">3</span></span><span class="gist">With the compass and no minimap (the Exploration question): herb and ore memory for the compass, and the zone name, clock and mail icon moved out of the hidden minimap.</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>GatherMate2</b> remembers herb and ore spots; the compass shows the nearest</li>
-    <li><b>GatherMate2 Data</b> every known herb and ore spawn spot, imported into GatherMate2</li>
-    <li class="own"><b>Zone Bar</b> <span class="tag own">setup helper</span> With Hide Anything hiding the minimap: takes the zone name (world map, clock), calendar, tracking button and mail icon out of it, each Shift-dragged to its own place (first under the bag bar), and hides the AddOns button and day/night dial. Keeps the hidden minimap cluster from coming back half-faded. With the minimap on, nothing changes.</li>
+    <li><b>GatherMate2</b><span>remembers herb and ore spots; the compass shows the nearest</span></li>
+    <li><b>GatherMate2 Data</b><span>every known herb and ore spawn spot, imported into GatherMate2</span></li>
+    <li><b>Zone Bar <i class="own">helper</i></b><span>With Hide Anything hiding the minimap: takes the zone name (world map, clock), calendar, tracking button and mail icon out of it, each Shift-dragged to its own place (first under the bag bar), and hides the AddOns button and day/night dial.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-compass-bar">
-  <summary><span class="part-name">Compass bar</span><span class="part-about">With Compass or Both (the Exploration question): a compass bar at the top of the screen and its markers.</span><span class="count">3 addons</span></summary>
+<details class="tile" id="part-compass-bar">
+  <summary><span class="t-head"><span class="t-name">Compass bar</span><span class="t-count">3</span></span><span class="gist">With Compass or Both (the Exploration question): a compass bar at the top of the screen and its markers.</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>Compass Bar</b> a compass bar at the top: quests, party, gathering spots</li>
-    <li class="own"><b>Compass Plus</b> <span class="tag own">setup helper</span> Extras for Kedge&#39;s Compass: markers for quest givers, townsfolk, dungeons, books, campfires, herbs and ore, guards&#39; directions, arrivals and known flight paths. Each part switches off per character in Forever Settings.</li>
-    <li class="own"><b>Compass Quick Menu</b> <span class="tag own">setup helper</span> Right-click Compass Bar for a menu to switch marker types on and off, pick ranges, and limit incomplete and completed quests separately (the active quest always shows). Shift+wheel on the bar (or a key binding) switches filters: All, Quests, Gathering, Town, Clean. The marker you face shows its name and distance; near markers draw larger. Also /cqm.</li>
+    <li><b>Compass Bar</b><span>a compass bar at the top: quests, party, gathering spots</span></li>
+    <li><b>Compass Plus <i class="own">helper</i></b><span>Extras for Kedge&#39;s Compass: markers for quest givers, townsfolk, dungeons, books, campfires, herbs and ore, guards&#39; directions, arrivals and known flight paths.</span></li>
+    <li><b>Compass Quick Menu <i class="own">helper</i></b><span>Right-click Compass Bar for a menu to switch marker types on and off, pick ranges, and limit incomplete and completed quests separately (the active quest always shows).</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-cinematic-nameplates">
-  <summary><span class="part-name">Cinematic nameplates</span><span class="part-about">With Cinematic nameplates (the Nameplates question): your target&#39;s buffs, power and menu on its plate.</span><span class="count">2 addons</span></summary>
+<details class="tile" id="part-cinematic-nameplates">
+  <summary><span class="t-head"><span class="t-name">Cinematic nameplates</span><span class="t-count">2</span></span><span class="gist">With Cinematic nameplates (the Nameplates question): your target&#39;s buffs, power and menu on its plate.</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li class="own"><b>Plates Plus</b> <span class="tag own">setup helper</span> Extras for nameplates: your target&#39;s buffs, power bar, target and menu, the quest mark, friendly health bars in fights and faction crests. Each part switches off per character in Forever Settings.</li>
-    <li class="own"><b>Stripped Unit Frames</b> <span class="tag own">setup helper</span> Keeps the player and target frame parts Cinematic&#39;s Unit Frames page hides hidden on mouseover too.</li>
+    <li><b>Plates Plus <i class="own">helper</i></b><span>Extras for nameplates: your target&#39;s buffs, power bar, target and menu, the quest mark, friendly health bars in fights and faction crests.</span></li>
+    <li><b>Stripped Unit Frames <i class="own">helper</i></b><span>Keeps the player and target frame parts Cinematic&#39;s Unit Frames page hides hidden on mouseover too.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-cinematic-camera">
-  <summary><span class="part-name">Cinematic camera</span><span class="part-about">With the cinematic camera (the Camera question): the camera zooms out in the open, closes in indoors and turns to NPCs who talk to you.</span><span class="count">2 addons</span></summary>
+<details class="tile" id="part-cinematic-camera">
+  <summary><span class="t-head"><span class="t-name">Cinematic camera</span><span class="t-count">2</span></span><span class="gist">With the cinematic camera (the Camera question): the camera zooms out in the open, closes in indoors and turns to NPCs who talk to you.</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>DynamicCam</b> a more dynamic camera (zooms and shoulder offset by situation)</li>
-    <li class="own"><b>DialogueUI Camera Hold</b> <span class="tag own">setup helper</span> Keeps DialogueUI&#39;s camera framing while a trainer, bank or other service window from the same NPC is open.</li>
+    <li><b>DynamicCam</b><span>a more dynamic camera (zooms and shoulder offset by situation)</span></li>
+    <li><b>DialogueUI Camera Hold <i class="own">helper</i></b><span>Keeps DialogueUI&#39;s camera framing while a trainer, bank or other service window from the same NPC is open.</span></li>
   </ul>
+  </div>
 </details>
-<details class="part" id="part-shamanpower">
-  <summary><span class="part-name">ShamanPower</span><span class="part-about">Only if you say yes (asked when you may have a shaman): a totem bar with timers.</span><span class="count">2 addons</span></summary>
+<details class="tile" id="part-shamanpower">
+  <summary><span class="t-head"><span class="t-name">ShamanPower</span><span class="t-count">2</span></span><span class="gist">Only if you say yes (asked when you may have a shaman): a totem bar with timers.</span></summary>
+  <div class="more">
   
-  <p class="in">In: <span class="tag">Let me pick</span></p>
+  <p class="in"><span class="tag">Let me pick</span></p>
   <ul class="addons">
-    <li><b>ShamanPower</b> a totem bar with timers and one-click totem drops</li>
-    <li class="own"><b>ShamanPower No Corpses</b> <span class="tag own">setup helper</span> ShamanPower&#39;s totem bar ignores dead targets (no bar while skinning or looting) and stays up out of combat while any totem is down or you are in a dungeon or raid. Shrinks its Drop All button, a fixed 26x26 with no size option.</li>
+    <li><b>ShamanPower</b><span>a totem bar with timers and one-click totem drops</span></li>
+    <li><b>ShamanPower No Corpses <i class="own">helper</i></b><span>ShamanPower&#39;s totem bar ignores dead targets (no bar while skinning or looting) and stays up out of combat while any totem is down or you are in a dungeon or raid.</span></li>
   </ul>
+  </div>
 </details><!-- /gen:parts -->
+</div>
 </section>
 
 <section id="helpers">
   <h2>The setup's helper addons</h2>
-  <p class="intro">Small addons made for this setup: fixes between addons, extras for the compass, nameplates and map, the profession journals, the Menagerie card game and the Journey page's recorder. They come with the part they serve. Each one switches on and off per character in game: <i>Options &gt; AddOns &gt; Forever Settings</i>.</p>
-<!-- gen:helpers --><ul class="helpers"><li><b>Awlmanac</b> <span class="tag">Profession journals</span><br>A leatherworker&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /awlmanac, a key binding or the minimap button opens the book.</li>
-<li><b>Bartender Cine Hover</b> <span class="tag">Action bars</span><br>Lets Cinematic&#39;s mouseover bring back faded Bartender4 bars, whose own frames are only 1x1.</li>
-<li><b>Clothbound</b> <span class="tag">Profession journals</span><br>A tailor&#39;s journal. Every piece you sew is written down; first kinds, new pieces, titles and badges get a paper toast, and /clothbound, a key binding or the minimap button opens the book.</li>
-<li><b>Cogitations</b> <span class="tag">Profession journals</span><br>An engineer&#39;s journal. Every build you make is written down; first kinds, new builds, titles and badges get a paper toast, and /cogitations, a key binding or the minimap button opens the book.</li>
-<li><b>Compass Plus</b> <span class="tag">Compass bar</span><br>Extras for Kedge&#39;s Compass: markers for quest givers, townsfolk, dungeons, books, campfires, herbs and ore, guards&#39; directions, arrivals and known flight paths. Each part switches off per character in Forever Settings.</li>
-<li><b>Compass Quick Menu</b> <span class="tag">Compass bar</span><br>Right-click Compass Bar for a menu to switch marker types on and off, pick ranges, and limit incomplete and completed quests separately (the active quest always shows). Shift+wheel on the bar (or a key binding) switches filters: All, Quests, Gathering, Town, Clean. The marker you face shows its name and distance; near markers draw larger. Also /cqm.</li>
-<li><b>DialogueUI Camera Hold</b> <span class="tag">Cinematic camera</span><br>Keeps DialogueUI&#39;s camera framing while a trainer, bank or other service window from the same NPC is open.</li>
-<li><b>Elixicon</b> <span class="tag">Profession journals</span><br>An alchemist&#39;s journal. Every potion, elixir and flask you brew is written down; first kinds, new brews, titles and badges get a paper toast, and /elixicon, a key binding or the minimap button opens the book.</li>
-<li><b>First Login Setup</b> <span class="tag">Core</span><br>Sets the game options and addon profiles the installer picked, once on each character.</li>
-<li><b>Forever Settings</b> <span class="tag">Core</span><br>Options &gt; AddOns &gt; Forever Settings: every helper&#39;s options on pages (this character, compass, nameplates, map and photos, interface), and per addon the setup&#39;s settings or your own.</li>
-<li><b>Forever Tweaks</b> <span class="tag">Core</span><br>Small fixes to the game&#39;s own frames: cards above Cinematic, the player frame while you eat, Glass&#39;s edit box, combat state text, corpse plates and raid frame health. Each part switches off per character in Forever Settings.</li>
-<li><b>Forgery</b> <span class="tag">Profession journals</span><br>A blacksmith&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /forgery, a key binding or the minimap button opens the book.</li>
-<li><b>Gauzette</b> <span class="tag">Profession journals</span><br>A medic&#39;s journal. Every bandage and remedy you make is written down; first kinds, new makes, titles and badges get a paper toast, and /gauzette, a key binding or the minimap button opens the book.</li>
-<li><b>Hidebound</b> <span class="tag">Profession journals</span><br>A skinner&#39;s journal. Every beast you skin is written down; first kinds of beast, new hides, titles and badges get a paper toast, and /hidebound, a key binding or the minimap button opens the book.</li>
-<li><b>Journey Icons</b> <span class="tag">Journey &amp; memories</span><br>Records the icon file of every item and class in Social Diary and BiS Memories, plus item names, race and faction, dungeon boss portraits and the route&#39;s map art, and logs profession milestones, plus the fish Pagle counted, your guild (members, changes, event log, news), your gold and reputation over time, the quests in your log, what you craft, skin, mine and pick, your jumps, hearthstone uses and repair bills, and the gear you wear with its enchants, for the Journey story page. Shows nothing in game.</li>
-<li><b>Map Plus</b> <span class="tag">Quests &amp; map</span><br>Extras for the world map: drag OpenMap with Cinematic&#39;s camera, dungeon maps from the Forever Dungeon Journal, Questie pins on the world map, and townsfolk icons hidden until you explore their area. Each part switches off per character in Forever Settings.</li>
-<li><b>Memories Plus</b> <span class="tag">Journey &amp; memories</span><br>Extras for BiS&gt;Memories: a faster album page, Cinematic&#39;s look kept in photos, and a photo when Social Diary greets someone again. Each part switches off per character in Forever Settings.</li>
-<li><b>Menagerie</b> <span class="tag">Extras</span><br>A card binder for the creatures and people of Azeroth. Kills can drop a creature&#39;s card, meeting someone can earn theirs, and playing fills a bar toward packs. /menagerie opens the binder.</li>
-<li><b>Minimap Button Groups</b> <span class="tag">Core</span><br>Sorts MinimapButtonButton&#39;s buttons into folders: Journals &amp; story, Map &amp; world, Look &amp; sound, Tools. Right click a folder to move any button. Shows MinimapButtonButton&#39;s button only while the mouse is on it or its list is open.</li>
-<li><b>Motherlode</b> <span class="tag">Profession journals</span><br>A miner&#39;s journal. Every vein you strike is written down; first veins, new gems, titles and badges get a short toast, and /motherlode (or a key binding) opens the book. A minimap button opens it too.</li>
-<li><b>Plates Plus</b> <span class="tag">Cinematic nameplates</span><br>Extras for nameplates: your target&#39;s buffs, power bar, target and menu, the quest mark, friendly health bars in fights and faction crests. Each part switches off per character in Forever Settings.</li>
-<li><b>Potluck</b> <span class="tag">Profession journals</span><br>A cook&#39;s journal. Every dish you cook is written down; first kinds, new dishes, titles and badges get a paper toast, and /potluck, a key binding or the minimap button opens the book.</li>
-<li><b>ShamanPower No Corpses</b> <span class="tag">ShamanPower</span><br>ShamanPower&#39;s totem bar ignores dead targets (no bar while skinning or looting) and stays up out of combat while any totem is down or you are in a dungeon or raid. Shrinks its Drop All button, a fixed 26x26 with no size option.</li>
-<li><b>Spellbound</b> <span class="tag">Profession journals</span><br>An enchanter&#39;s journal. Every enchant, make and disenchant is written down; first kinds, new finds, titles and badges get a paper toast, and /spellbound, a key binding or the minimap button opens the book.</li>
-<li><b>Spoken + Lore Forever Bridge</b> <span class="tag">Spoken</span><br>Keeps Spoken and Lore Forever from talking over each other, and shows Lore Forever&#39;s chat hints on screen while chat is faded.</li>
-<li><b>Stripped Unit Frames</b> <span class="tag">Cinematic nameplates</span><br>Keeps the player and target frame parts Cinematic&#39;s Unit Frames page hides hidden on mouseover too.</li>
-<li><b>Thymeline</b> <span class="tag">Profession journals</span><br>A herbalist&#39;s journal. Every herb you pick is written down; first herbs, new pressings, titles and badges get a paper toast, and /thymeline, a key binding or the minimap button opens the book.</li>
-<li><b>Weather Button Bridge</b> <span class="tag">Atmosphere</span><br>Puts Weather&#39;s forecast button into MinimapButtonButton, which can&#39;t collect Weather&#39;s own unnamed button.</li>
-<li><b>WIM Bag Button</b> <span class="tag">Whisper windows</span><br>A WIM button right of the Bartender4 bag bar (or on screen without Bartender4), since WIM&#39;s own button sits on the hidden minimap. Keeps whispers in WIM by turning off Glass&#39;s whisper windows and whisper tabs.</li>
-<li><b>Zone Bar</b> <span class="tag">Compass, minimap hidden</span><br>With Hide Anything hiding the minimap: takes the zone name (world map, clock), calendar, tracking button and mail icon out of it, each Shift-dragged to its own place (first under the bag bar), and hides the AddOns button and day/night dial. Keeps the hidden minimap cluster from coming back half-faded. With the minimap on, nothing changes.</li></ul><!-- /gen:helpers -->
+  <p class="intro">Small addons made for this setup. Each comes with the part it serves and switches per character in <i>Options &gt; AddOns &gt; Forever Settings</i>.</p>
+<div class="tiles">
+<!-- gen:helpers --><details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Awlmanac</span></span><span class="gist">A leatherworker&#39;s journal.</span></summary><div class="more"><p>Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /awlmanac, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Action bars</span><span class="t-head"><span class="t-name">Bartender Cine Hover</span></span><span class="gist">Lets Cinematic&#39;s mouseover bring back faded Bartender4 bars, whose own frames are only 1x1.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Clothbound</span></span><span class="gist">A tailor&#39;s journal.</span></summary><div class="more"><p>Every piece you sew is written down; first kinds, new pieces, titles and badges get a paper toast, and /clothbound, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Cogitations</span></span><span class="gist">An engineer&#39;s journal.</span></summary><div class="more"><p>Every build you make is written down; first kinds, new builds, titles and badges get a paper toast, and /cogitations, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Compass bar</span><span class="t-head"><span class="t-name">Compass Plus</span></span><span class="gist">Extras for Kedge&#39;s Compass: markers for quest givers, townsfolk, dungeons, books, campfires, herbs and ore, guards&#39; directions, arrivals and known flight paths.</span></summary><div class="more"><p>Each part switches off per character in Forever Settings.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Compass bar</span><span class="t-head"><span class="t-name">Compass Quick Menu</span></span><span class="gist">Right-click Compass Bar for a menu to switch marker types on and off, pick ranges, and limit incomplete and completed quests separately (the active quest always shows).</span></summary><div class="more"><p>Shift+wheel on the bar (or a key binding) switches filters: All, Quests, Gathering, Town, Clean. The marker you face shows its name and distance; near markers draw larger. Also /cqm.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Cinematic camera</span><span class="t-head"><span class="t-name">DialogueUI Camera Hold</span></span><span class="gist">Keeps DialogueUI&#39;s camera framing while a trainer, bank or other service window from the same NPC is open.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Elixicon</span></span><span class="gist">An alchemist&#39;s journal.</span></summary><div class="more"><p>Every potion, elixir and flask you brew is written down; first kinds, new brews, titles and badges get a paper toast, and /elixicon, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Core</span><span class="t-head"><span class="t-name">First Login Setup</span></span><span class="gist">Sets the game options and addon profiles the installer picked, once on each character.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Core</span><span class="t-head"><span class="t-name">Forever Settings</span></span><span class="gist">Options &gt; AddOns &gt; Forever Settings: every helper&#39;s options on pages (this character, compass, nameplates, map and photos, interface), and per addon the setup&#39;s settings or your own.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Core</span><span class="t-head"><span class="t-name">Forever Tweaks</span></span><span class="gist">Small fixes to the game&#39;s own frames: cards above Cinematic, the player frame while you eat, Glass&#39;s edit box, combat state text, corpse plates and raid frame health.</span></summary><div class="more"><p>Each part switches off per character in Forever Settings.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Forgery</span></span><span class="gist">A blacksmith&#39;s journal.</span></summary><div class="more"><p>Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /forgery, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Gauzette</span></span><span class="gist">A medic&#39;s journal.</span></summary><div class="more"><p>Every bandage and remedy you make is written down; first kinds, new makes, titles and badges get a paper toast, and /gauzette, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Hidebound</span></span><span class="gist">A skinner&#39;s journal.</span></summary><div class="more"><p>Every beast you skin is written down; first kinds of beast, new hides, titles and badges get a paper toast, and /hidebound, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Journey &amp; memories</span><span class="t-head"><span class="t-name">Journey Icons</span></span><span class="gist">Records the icon file of every item and class in Social Diary and BiS Memories, plus item names, race and faction, dungeon boss portraits and the route&#39;s map art, and logs profession milestones, plus the fish Pagle counted, your guild (members, changes, event log, news), your gold and reputation over time, the quests in your log, what you craft, skin, mine and pick, your jumps, hearthstone uses and repair bills, and the gear you wear with its enchants, for the Journey story page.</span></summary><div class="more"><p>Shows nothing in game.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Quests &amp; map</span><span class="t-head"><span class="t-name">Map Plus</span></span><span class="gist">Extras for the world map: drag OpenMap with Cinematic&#39;s camera, dungeon maps from the Forever Dungeon Journal, Questie pins on the world map, and townsfolk icons hidden until you explore their area.</span></summary><div class="more"><p>Each part switches off per character in Forever Settings.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Journey &amp; memories</span><span class="t-head"><span class="t-name">Memories Plus</span></span><span class="gist">Extras for BiS&gt;Memories: a faster album page, Cinematic&#39;s look kept in photos, and a photo when Social Diary greets someone again.</span></summary><div class="more"><p>Each part switches off per character in Forever Settings.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Extras</span><span class="t-head"><span class="t-name">Menagerie</span></span><span class="gist">A card binder for the creatures and people of Azeroth.</span></summary><div class="more"><p>Kills can drop a creature&#39;s card, meeting someone can earn theirs, and playing fills a bar toward packs. /menagerie opens the binder.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Core</span><span class="t-head"><span class="t-name">Minimap Button Groups</span></span><span class="gist">Sorts MinimapButtonButton&#39;s buttons into folders: Journals &amp; story, Map &amp; world, Look &amp; sound, Tools.</span></summary><div class="more"><p>Right click a folder to move any button. Shows MinimapButtonButton&#39;s button only while the mouse is on it or its list is open.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Motherlode</span></span><span class="gist">A miner&#39;s journal.</span></summary><div class="more"><p>Every vein you strike is written down; first veins, new gems, titles and badges get a short toast, and /motherlode (or a key binding) opens the book. A minimap button opens it too.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Cinematic nameplates</span><span class="t-head"><span class="t-name">Plates Plus</span></span><span class="gist">Extras for nameplates: your target&#39;s buffs, power bar, target and menu, the quest mark, friendly health bars in fights and faction crests.</span></summary><div class="more"><p>Each part switches off per character in Forever Settings.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Potluck</span></span><span class="gist">A cook&#39;s journal.</span></summary><div class="more"><p>Every dish you cook is written down; first kinds, new dishes, titles and badges get a paper toast, and /potluck, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">ShamanPower</span><span class="t-head"><span class="t-name">ShamanPower No Corpses</span></span><span class="gist">ShamanPower&#39;s totem bar ignores dead targets (no bar while skinning or looting) and stays up out of combat while any totem is down or you are in a dungeon or raid.</span></summary><div class="more"><p>Shrinks its Drop All button, a fixed 26x26 with no size option.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Spellbound</span></span><span class="gist">An enchanter&#39;s journal.</span></summary><div class="more"><p>Every enchant, make and disenchant is written down; first kinds, new finds, titles and badges get a paper toast, and /spellbound, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Spoken</span><span class="t-head"><span class="t-name">Spoken + Lore Forever Bridge</span></span><span class="gist">Keeps Spoken and Lore Forever from talking over each other, and shows Lore Forever&#39;s chat hints on screen while chat is faded.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Cinematic nameplates</span><span class="t-head"><span class="t-name">Stripped Unit Frames</span></span><span class="gist">Keeps the player and target frame parts Cinematic&#39;s Unit Frames page hides hidden on mouseover too.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Profession journals</span><span class="t-head"><span class="t-name">Thymeline</span></span><span class="gist">A herbalist&#39;s journal.</span></summary><div class="more"><p>Every herb you pick is written down; first herbs, new pressings, titles and badges get a paper toast, and /thymeline, a key binding or the minimap button opens the book.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Atmosphere</span><span class="t-head"><span class="t-name">Weather Button Bridge</span></span><span class="gist">Puts Weather&#39;s forecast button into MinimapButtonButton, which can&#39;t collect Weather&#39;s own unnamed button.</span></summary><div class="more"><p>That is all it does.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Whisper windows</span><span class="t-head"><span class="t-name">WIM Bag Button</span></span><span class="gist">A WIM button right of the Bartender4 bag bar (or on screen without Bartender4), since WIM&#39;s own button sits on the hidden minimap.</span></summary><div class="more"><p>Keeps whispers in WIM by turning off Glass&#39;s whisper windows and whisper tabs.</p></div></details>
+<details class="tile"><summary><span class="t-kicker">Compass, minimap hidden</span><span class="t-head"><span class="t-name">Zone Bar</span></span><span class="gist">With Hide Anything hiding the minimap: takes the zone name (world map, clock), calendar, tracking button and mail icon out of it, each Shift-dragged to its own place (first under the bag bar), and hides the AddOns button and day/night dial.</span></summary><div class="more"><p>Keeps the hidden minimap cluster from coming back half-faded. With the minimap on, nothing changes.</p></div></details><!-- /gen:helpers -->
+</div>
 </section>
 
-<section id="journey">
-  <h2>The Journey story page</h2>
-  <div class="journey">
-    <div>
-      <p>Your character's journey as one long web page: the route on the map, every day played, levels, deaths and close calls, quests, dungeons with their bosses and loot, the people you met, professions, gold, photos of your moments and a closing epilogue. It is built on your PC from what the addons below record while you play; nothing is uploaded.</p>
-      <p>Build it with <b>Build Journey.bat</b> in the <code>Journey</code> folder of your game. <b>Journey only</b> brings just the addons it reads and keeps the rest of your own setup.</p>
-      <p><a class="btn" href="journey-example.html" target="_blank" rel="noopener">Open an example page</a></p>
-      <p class="small">The example is made-up data: 60 play days of an invented Tauren Shaman, from level 1 to 60, built from the game's real quests and zones. It is large (about 11 MB), give it a moment.</p>
-    </div>
-  </div>
-  <table class="sources">
-    <caption>What each addon adds to the page</caption>
-<!-- gen:journey --><tr><th>Social Diary</th><td>The backbone: route, days, levels, deaths, close calls, quests, people, world PvP. Always in: no page without it.</td></tr>
-<tr><th>Journey Icons</th><td>A setup helper: item icons and names, map art, professions, crafting and gathering, gold, reputation, guild. Always in.</td></tr>
-<tr><th>BiS&gt;Memories</th><td>Photos of your moments, the gear you wore and new-gear lines. It takes a screenshot when something worth remembering happens.</td></tr>
-<tr><th>Leatrix Maps</th><td>Paints the areas you explored onto the zone maps. Installed switched off: only its file is read, your own map stays the map.</td></tr>
-<tr><th>Dungeon Journal</th><td>Boss-by-boss dungeon run cards with loot and boss portraits, flight paths and time in the air.</td></tr>
-<tr><th>Profession journals</th><td>Pagle for fishing and a journal for each profession: your catches, firsts, badges, legends and signed books.</td></tr>
-<tr><th>Weather</th><td>The rain you travelled through (wettest place, time in rain).</td></tr>
-<tr><th>Lore Forever</th><td>Lore you uncovered, the questions you asked, zone visits. A narrator that speaks in game; about 190 MB, and about 2 seconds more loading when you log in.</td></tr>
-<tr><th>Spoken</th><td>Places, stories, boss stories and books you heard. Reads quests and books aloud in game; a big download (over 1 GB of voices).</td></tr>
-<tr><th>Questie</th><td>The quest helper (givers, objectives and turn-ins on the map). The page reads its quest log: which quests, where and when.</td></tr>
-<tr><th>Auctionator</th><td>The auction house helper. The page reads what you listed and sold.</td></tr>
-<tr><th>BagBrother</th><td>Remembers each character&#39;s gold and bags: the data part of Bagnon, without its bag windows. The page&#39;s account part reads it.</td></tr>
-<tr><th>Manners</th><td>Buffs back whoever buffed you in one click and keeps a favour ledger. The page reads the ledger: who buffed you and what you gave back.</td></tr>
-<tr><th>Menagerie</th><td>The setup&#39;s creature card game: the cards you found, your battles, duels and Warband expeditions.</td></tr><!-- /gen:journey -->
-  </table>
-</section>
 
 <section id="faq">
   <h2>Questions</h2>
