@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Forever Setup</title>
+<meta name="description" content="Addons, helpers and settings for World of Warcraft Forever, installed in one go.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">World of Warcraft Forever &middot; Windows</p>
+    <h1>Forever Setup</h1>
+    <p class="lede">A set of addons for the <code>_forever_</code> client, the small helper addons made to tie them together, and settings tuned to work as one. One download, a few questions, and the CurseForge app does the rest.</p>
+    <p class="meta">Version <!-- gen:version -->1.2.6<!-- /gen:version --> &middot; <!-- gen:addoncount -->66<!-- /gen:addoncount --> addons &middot; <!-- gen:helpercount -->30<!-- /gen:helpercount --> setup helpers</p>
+    <nav aria-label="Sections">
+      <a href="#choose">Download</a><a href="#installed">Already installed?</a><a href="#inside">What's inside</a><a href="#helpers">Helpers</a><a href="#journey">Journey page</a><a href="#faq">Questions</a><a href="#new">What's new</a><a href="#help">Help</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="choose">
+  <h2>Choose your setup</h2>
+  <p class="intro">Pick a card, then download. The installer starts on that setup and asks the rest; nothing is written before you press <b>Install now</b>, and a snapshot of your addons and settings is saved first.</p>
+  <form class="cards" id="cards" onsubmit="return false">
+<!-- gen:cards --><label class="card rec" for="p-full-experience">
+  <input type="radio" name="preset" id="p-full-experience" value="Forever-Setup-full-experience.bat" data-name="Full experience" checked>
+  <span class="card-head"><span class="card-name">Full experience</span><span class="badge">Recommended</span></span>
+  <span class="card-sub">everything, with Spoken narration (optional parts: tick them next)</span>
+  <ul><li>Parts: Action bars, Quests &amp; map, Gathering, Profession journals, Bags &amp; auction, Whisper windows, Journey &amp; memories, Atmosphere, Spoken, Extras, with Core</li><li>Optional parts you can tick next: Atlas, Lore Forever</li><li>A few look-and-feel questions, or the recommended answers</li></ul>
+  <span class="size">about 4.2 GB</span>
+  <a class="direct" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-full-experience.bat" download>Download this one</a>
+</label>
+<label class="card" for="p-gameplay-only">
+  <input type="radio" name="preset" id="p-gameplay-only" value="Forever-Setup-gameplay-only.bat" data-name="Gameplay only">
+  <span class="card-head"><span class="card-name">Gameplay only</span></span>
+  <span class="card-sub">everything but the voices (much smaller)</span>
+  <ul><li>Parts: Action bars, Quests &amp; map, Gathering, Profession journals, Bags &amp; auction, Whisper windows, Journey &amp; memories, Atmosphere, Extras, with Core</li><li>Optional parts you can tick next: Atlas, Lore Forever</li><li>A few look-and-feel questions, or the recommended answers</li></ul>
+  <span class="size">about 1.5 GB</span>
+  <a class="direct" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-gameplay-only.bat" download>Download this one</a>
+</label>
+<label class="card" for="p-narration-only">
+  <input type="radio" name="preset" id="p-narration-only" value="Forever-Setup-narration-only.bat" data-name="Narration only">
+  <span class="card-head"><span class="card-name">Narration only</span></span>
+  <span class="card-sub">the voices + a helper for them; keeps your existing settings</span>
+  <ul><li>Only Spoken and Lore Forever with their voices, plus a helper that stops them talking over each other.</li><li>Lore Forever is large and adds about 2 seconds to logging in.</li></ul>
+  <span class="size">about 3.6 GB</span>
+  <a class="direct" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-narration-only.bat" download>Download this one</a>
+</label>
+<label class="card" for="p-journey-only">
+  <input type="radio" name="preset" id="p-journey-only" value="Forever-Setup-journey-only.bat" data-name="Journey only">
+  <span class="card-head"><span class="card-name">Journey only</span></span>
+  <span class="card-sub">keep your own addons; every addon the Journey story pages read</span>
+  <ul><li>The addons that record your journey: Social Diary, Journey Icons, BiS&gt;Memories, Leatrix Maps, Dungeon Journal, Profession journals, Weather, Lore Forever, Spoken, Questie, Auctionator, BagBrother, Manners, Menagerie.</li><li>Next: untick any you don&#39;t want. Spoken and Lore Forever start unticked: they are large (over 1 GB and about 190 MB).</li></ul>
+  <span class="size">about 760 MB (3.7 GB with Spoken and Lore Forever)</span>
+  <a class="direct" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-journey-only.bat" download>Download this one</a>
+</label>
+<label class="card" for="p-menagerie-only">
+  <input type="radio" name="preset" id="p-menagerie-only" value="Forever-Setup-menagerie-only.bat" data-name="Menagerie only">
+  <span class="card-head"><span class="card-name">Menagerie only</span></span>
+  <span class="card-sub">just the Menagerie card game; everything else stays as it is</span>
+  <ul><li>Only Menagerie, the setup&#39;s creature card game (/menagerie). No other addon, no settings, no more questions.</li></ul>
+  <span class="size">about 80 MB</span>
+  <a class="direct" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-menagerie-only.bat" download>Download this one</a>
+</label>
+<label class="card" for="p-let-me-pick">
+  <input type="radio" name="preset" id="p-let-me-pick" value="Forever-Setup-let-me-pick.bat" data-name="Let me pick">
+  <span class="card-head"><span class="card-name">Let me pick</span></span>
+  <span class="card-sub">every addon one by one, each with its helpers</span>
+  <ul><li>No bundles: first the look-and-feel questions (compass or minimap among them), then every addon in one list, each with the helper addons made for it. Tick only the ones you want.</li></ul>
+  <span class="size">what you tick: about 100 MB to 5 GB</span>
+  <a class="direct" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-let-me-pick.bat" download>Download this one</a>
+</label><!-- /gen:cards -->
+  </form>
+  <div class="go">
+    <a class="big" id="download" href="https://github.com/tgabrielc/forever-setup/releases/latest/download/Forever-Setup-full-experience.bat" download>Download <span id="dl-name">Full experience</span></a>
+    <p class="small">A small <code>.bat</code> file (about 4 KB). It fetches the newest setup into a <b>Forever Setup</b> folder beside itself and starts the installer.</p>
+  </div>
+  <ol class="steps">
+    <li><b>Install the CurseForge app</b> and log in. The addons come through it, so they update later like any other.</li>
+    <li><b>Run the downloaded file.</b> If Windows warns about it, pick <i>More info</i> then <i>Run anyway</i>; your browser may ask you to <i>Keep</i> it first.</li>
+    <li><b>Answer the questions</b> with the arrow keys, Space and Enter. The grey lines under each list explain the highlighted line.</li>
+    <li><b>Restart the game</b> (a /reload is not enough for new addons). Each character sets itself up on its first login.</li>
+  </ol>
+</section>
+
+<section id="installed">
+  <h2>Already installed?</h2>
+  <p class="intro">These buttons start the tools in your <b>Forever Setup</b> folder. Your browser asks first; allow it to open <i>Windows PowerShell</i>.</p>
+  <div class="actions">
+    <a class="btn" href="forever-setup:update">Update now</a>
+    <a class="btn ghost" href="forever-setup:install">Change my answers</a>
+  </div>
+  <ul class="small">
+    <li><b>Update now</b> runs Update.bat: the newest helper fixes for what you have. Your settings are not touched. It offers the installer when there is something new to ask.</li>
+    <li><b>Change my answers</b> runs Install.bat: your last answers come up in a summary; pick <i>Change my answers</i> there to go through the questions.</li>
+    <li>Nothing happens? The buttons are set up by the installer or Update.bat from version 1.2.6. Download a setup above once, or run Update.bat from your Forever Setup folder, and they work from then on.</li>
+  </ul>
+</section>
+
+<section id="inside">
+  <h2>What's inside</h2>
+  <p class="intro">The setup is made of parts. Full experience brings every part except the optional ones; the look-and-feel questions add the compass, nameplate and camera parts. Open a part to see its addons and what each one does. <span class="tag own">setup helper</span> marks the small addons made for this setup.</p>
+<!-- gen:parts --><details class="part" id="part-core">
+  <summary><span class="part-name">Core</span><span class="part-about">Cinematic look, chat, dialogue, unit frames (always)</span><span class="count">14 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>BugGrabber</b> catches addon errors quietly (for BugSack)</li>
+    <li><b>BugSack</b> shows caught addon errors when you ask, instead of pop-ups</li>
+    <li><b>Cinematic</b> the main look: UI fades between fights, cinematic cameras, letterbox, weather</li>
+    <li><b>Dialogue UI</b> quest and NPC talk as a cinematic dialogue</li>
+    <li><b>Glass Forever</b> minimal chat that fades when quiet</li>
+    <li><b>Hide Anything - Forever</b> hides the game frames this setup replaces (minimap, target frame...)</li>
+    <li><b>Leatrix Plus</b> many small quality-of-life options</li>
+    <li><b>MinimapButtonButton</b> collects addon minimap buttons into one button</li>
+    <li><b>RPGLootFeed</b> a small feed of what you just looted</li>
+    <li><b>Mouse Over Tooltip</b> a minimal unit tooltip on mouseover</li>
+    <li class="own"><b>First Login Setup</b> <span class="tag own">setup helper</span> Sets the game options and addon profiles the installer picked, once on each character.</li>
+    <li class="own"><b>Forever Settings</b> <span class="tag own">setup helper</span> Options &gt; AddOns &gt; Forever Settings: every helper&#39;s options on pages (this character, compass, nameplates, map and photos, interface), and per addon the setup&#39;s settings or your own.</li>
+    <li class="own"><b>Forever Tweaks</b> <span class="tag own">setup helper</span> Small fixes to the game&#39;s own frames: cards above Cinematic, the player frame while you eat, Glass&#39;s edit box, combat state text, corpse plates and raid frame health. Each part switches off per character in Forever Settings.</li>
+    <li class="own"><b>Minimap Button Groups</b> <span class="tag own">setup helper</span> Sorts MinimapButtonButton&#39;s buttons into folders: Journals &amp; story, Map &amp; world, Look &amp; sound, Tools. Right click a folder to move any button. Shows MinimapButtonButton&#39;s button only while the mouse is on it or its list is open.</li>
+  </ul>
+</details>
+<details class="part" id="part-action-bars">
+  <summary><span class="part-name">Action bars</span><span class="part-about">Bartender4 bars that fade with Cinematic</span><span class="count">2 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Bartender4</b> action bars, laid out for this setup</li>
+    <li class="own"><b>Bartender Cine Hover</b> <span class="tag own">setup helper</span> Lets Cinematic&#39;s mouseover bring back faded Bartender4 bars, whose own frames are only 1x1.</li>
+  </ul>
+</details>
+<details class="part" id="part-quests-map">
+  <summary><span class="part-name">Quests &amp; map</span><span class="part-about">Questie, OpenMap, Dungeon Journal, library books</span><span class="count">6 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>DungeonJournal</b> boss, loot and quest journal for dungeons</li>
+    <li><b>Librarian Books Forever</b> tracks the 40 library books: which you still need and where they are (/librarian)</li>
+    <li><b>OpenMap</b> one seamless world map, every zone stitched together</li>
+    <li><b>Questie</b> quest helper: givers, objectives and turn-ins on the map</li>
+    <li><b>QuestieDB</b> the quest database Questie reads</li>
+    <li class="own"><b>Map Plus</b> <span class="tag own">setup helper</span> Extras for the world map: drag OpenMap with Cinematic&#39;s camera, dungeon maps from the Forever Dungeon Journal, Questie pins on the world map, and townsfolk icons hidden until you explore their area. Each part switches off per character in Forever Settings.</li>
+  </ul>
+</details>
+<details class="part" id="part-atlas">
+  <summary><span class="part-name">Atlas</span><span class="part-about">dungeon and raid maps (optional)</span><span class="count">5 addons</span></summary>
+  <p class="why">Optional: five addon folders and about 0.3 seconds more loading when you log in. Dungeon Journal already shows dungeon maps and loot.</p>
+  <p class="in">In: <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Atlas</b> dungeon and raid maps with their bosses and loot</li>
+    <li><b>Atlas Kalimdor &amp; Eastern Kingdoms</b> Atlas maps: the classic dungeons and raids</li>
+    <li><b>Atlas Battlegrounds</b> Atlas maps: battlegrounds</li>
+    <li><b>Atlas Dungeon Locations</b> Atlas maps: where each dungeon entrance is</li>
+    <li><b>Atlas Transportation</b> Atlas maps: flight paths, boats and zeppelins</li>
+  </ul>
+</details>
+<details class="part" id="part-gathering">
+  <summary><span class="part-name">Gathering</span><span class="part-about">herbs and ore: sparkles and glow nearby</span><span class="count">2 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Lueur</b> herbs, ore, chests and quest objects glow as you approach; minimap node icons</li>
+    <li><b>Node Sight</b> gold sparkles on nearby herbs and ore; skill needed in tooltips</li>
+  </ul>
+</details>
+<details class="part" id="part-profession-journals">
+  <summary><span class="part-name">Profession journals</span><span class="part-about">Pagle for fishing and a journal for each profession</span><span class="count">12 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Pagle</b> fishing: progress, a catch collection, goals and a one-key fishing button</li>
+    <li class="own"><b>Awlmanac</b> <span class="tag own">setup helper</span> A leatherworker&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /awlmanac, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Clothbound</b> <span class="tag own">setup helper</span> A tailor&#39;s journal. Every piece you sew is written down; first kinds, new pieces, titles and badges get a paper toast, and /clothbound, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Cogitations</b> <span class="tag own">setup helper</span> An engineer&#39;s journal. Every build you make is written down; first kinds, new builds, titles and badges get a paper toast, and /cogitations, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Elixicon</b> <span class="tag own">setup helper</span> An alchemist&#39;s journal. Every potion, elixir and flask you brew is written down; first kinds, new brews, titles and badges get a paper toast, and /elixicon, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Forgery</b> <span class="tag own">setup helper</span> A blacksmith&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /forgery, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Gauzette</b> <span class="tag own">setup helper</span> A medic&#39;s journal. Every bandage and remedy you make is written down; first kinds, new makes, titles and badges get a paper toast, and /gauzette, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Hidebound</b> <span class="tag own">setup helper</span> A skinner&#39;s journal. Every beast you skin is written down; first kinds of beast, new hides, titles and badges get a paper toast, and /hidebound, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Motherlode</b> <span class="tag own">setup helper</span> A miner&#39;s journal. Every vein you strike is written down; first veins, new gems, titles and badges get a short toast, and /motherlode (or a key binding) opens the book. A minimap button opens it too.</li>
+    <li class="own"><b>Potluck</b> <span class="tag own">setup helper</span> A cook&#39;s journal. Every dish you cook is written down; first kinds, new dishes, titles and badges get a paper toast, and /potluck, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Spellbound</b> <span class="tag own">setup helper</span> An enchanter&#39;s journal. Every enchant, make and disenchant is written down; first kinds, new finds, titles and badges get a paper toast, and /spellbound, a key binding or the minimap button opens the book.</li>
+    <li class="own"><b>Thymeline</b> <span class="tag own">setup helper</span> A herbalist&#39;s journal. Every herb you pick is written down; first herbs, new pressings, titles and badges get a paper toast, and /thymeline, a key binding or the minimap button opens the book.</li>
+  </ul>
+</details>
+<details class="part" id="part-bags-auction">
+  <summary><span class="part-name">Bags &amp; auction</span><span class="part-about">Bagnon bags, Auctionator</span><span class="count">4 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Auctionator</b> auction house: fast search, price history, quick selling</li>
+    <li><b>Bagnon</b> all your bags in one window</li>
+    <li><b>Bagnon Battles</b> a backpack auto-battler mini-game inside Bagnon</li>
+    <li><b>BagBrother</b> remembers each character&#39;s gold and bags (Bagnon brings it too)</li>
+  </ul>
+</details>
+<details class="part" id="part-whisper-windows">
+  <summary><span class="part-name">Whisper windows</span><span class="part-about">whispers open as their own chat windows (WIM)</span><span class="count">2 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>WIM</b> whispers open as their own chat windows, like a messenger</li>
+    <li class="own"><b>WIM Bag Button</b> <span class="tag own">setup helper</span> A WIM button right of the Bartender4 bag bar (or on screen without Bartender4), since WIM&#39;s own button sits on the hidden minimap. Keeps whispers in WIM by turning off Glass&#39;s whisper windows and whisper tabs.</li>
+  </ul>
+</details>
+<details class="part" id="part-journey-memories">
+  <summary><span class="part-name">Journey &amp; memories</span><span class="part-about">Social Diary, memory photos, Journey story pages</span><span class="count">5 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>BiS&gt;Memories</b> a screenshot and a note when something worth remembering happens</li>
+    <li><b>Leatrix Maps</b> only its map of explored areas, for the Journey pages; installed switched off (OpenMap is the map)</li>
+    <li><b>Social Diary</b> remembers the people you meet in the open world</li>
+    <li class="own"><b>Journey Icons</b> <span class="tag own">setup helper</span> Records the icon file of every item and class in Social Diary and BiS Memories, plus item names, race and faction, dungeon boss portraits and the route&#39;s map art, and logs profession milestones, plus the fish Pagle counted, your guild (members, changes, event log, news), your gold and reputation over time, the quests in your log, what you craft, skin, mine and pick, your jumps, hearthstone uses and repair bills, and the gear you wear with its enchants, for the Journey story page. Shows nothing in game.</li>
+    <li class="own"><b>Memories Plus</b> <span class="tag own">setup helper</span> Extras for BiS&gt;Memories: a faster album page, Cinematic&#39;s look kept in photos, and a photo when Social Diary greets someone again. Each part switches off per character in Forever Settings.</li>
+  </ul>
+</details>
+<details class="part" id="part-atmosphere">
+  <summary><span class="part-name">Atmosphere</span><span class="part-about">more music, weather, campfires</span><span class="count">4 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>CozyFire</b> marks campfires on the map; camp object tooltips</li>
+    <li><b>Forever Ambient Music Extended</b> more music from every WoW era, fitted to where you are</li>
+    <li><b>Weather</b> weather ambience indoors and accessory reminders</li>
+    <li class="own"><b>Weather Button Bridge</b> <span class="tag own">setup helper</span> Puts Weather&#39;s forecast button into MinimapButtonButton, which can&#39;t collect Weather&#39;s own unnamed button.</li>
+  </ul>
+</details>
+<details class="part" id="part-spoken">
+  <summary><span class="part-name">Spoken</span><span class="part-about">quests, books and places read aloud (over 1 GB to download)</span><span class="count">10 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Narration only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Spoken: English</b> Spoken: the English voice packs, all in one</li>
+    <li><b>Spoken</b> reads quests, gossip, places and books aloud</li>
+    <li><b>Spoken Audio: Quests - All</b> Spoken voices: quests (all)</li>
+    <li><b>Spoken Audio: Quests - Alliance</b> Spoken voices: Alliance quests</li>
+    <li><b>Spoken Audio: Quests - Horde</b> Spoken voices: Horde quests</li>
+    <li><b>Spoken Audio: Quests - Shared</b> Spoken voices: shared quests</li>
+    <li><b>Spoken Audio: Gossip</b> Spoken voices: gossip</li>
+    <li><b>Spoken Audio: Places</b> Spoken voices: places</li>
+    <li><b>Spoken Audio: Readables</b> Spoken voices: books and letters</li>
+    <li class="own"><b>Spoken + Lore Forever Bridge</b> <span class="tag own">setup helper</span> Keeps Spoken and Lore Forever from talking over each other, and shows Lore Forever&#39;s chat hints on screen while chat is faded.</li>
+  </ul>
+</details>
+<details class="part" id="part-lore-forever">
+  <summary><span class="part-name">Lore Forever</span><span class="part-about">a narrator for lore (optional: large, slower login)</span><span class="count">5 addons</span></summary>
+  <p class="why">Optional: the slowest addon of the setup, about 2 seconds more loading when you log in, and large (about 190 MB, plus voice packs from its website).</p>
+  <p class="in">In: <span class="tag">Narration only</span> <span class="tag">Journey only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Lore Forever</b> narrated lore of the zones, quests, people and items around you</li>
+    <li><b>Lore Forever - Female Narrator</b> Lore Forever: the female narrator voice</li>
+    <li><b>Lore Forever - Female Narrator (Horde lands)</b> female narrator: Horde lands</li>
+    <li><b>Lore Forever - Female Narrator: More People</b> female narrator: more people</li>
+    <li><b>Lore Forever - Female Narrator: More Places</b> female narrator: more places</li>
+  </ul>
+</details>
+<details class="part" id="part-extras">
+  <summary><span class="part-name">Extras</span><span class="part-about">Narcissus character screen, Menagerie card binder, Manners buffs, Recipe List</span><span class="count">13 addons</span></summary>
+  <p class="why">Menagerie only brings just Menagerie from this part.</p>
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Journey only</span> <span class="tag">Menagerie only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Narcissus</b> an immersive character screen and photo studio (/narci); about 0.6 seconds more loading at login</li>
+    <li><b>Manners</b> one click buffs back whoever buffed you, and passers-by missing your buff; the Journey page reads its favour ledger</li>
+    <li><b>Ackis Recipe List</b> lists every recipe of your professions, known or not, and where to learn it (/arl)</li>
+    <li><b>Ackis Recipe List: Alchemy</b> Recipe List: alchemy recipes</li>
+    <li><b>Ackis Recipe List: Blacksmithing</b> Recipe List: blacksmithing recipes</li>
+    <li><b>Ackis Recipe List: Cooking</b> Recipe List: cooking recipes</li>
+    <li><b>Ackis Recipe List: Enchanting</b> Recipe List: enchanting recipes</li>
+    <li><b>Ackis Recipe List: Engineering</b> Recipe List: engineering recipes</li>
+    <li><b>Ackis Recipe List: First Aid</b> Recipe List: first aid recipes</li>
+    <li><b>Ackis Recipe List: Leatherworking</b> Recipe List: leatherworking recipes</li>
+    <li><b>Ackis Recipe List: Mining</b> Recipe List: mining (smelting) recipes</li>
+    <li><b>Ackis Recipe List: Tailoring</b> Recipe List: tailoring recipes</li>
+    <li class="own"><b>Menagerie</b> <span class="tag own">setup helper</span> A card binder for the creatures and people of Azeroth. Kills can drop a creature&#39;s card, meeting someone can earn theirs, and playing fills a bar toward packs. /menagerie opens the binder.</li>
+  </ul>
+</details>
+<details class="part" id="part-compass-minimap-hidden">
+  <summary><span class="part-name">Compass, minimap hidden</span><span class="part-about">With the compass and no minimap (the Exploration question): herb and ore memory for the compass, and the zone name, clock and mail icon moved out of the hidden minimap.</span><span class="count">3 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>GatherMate2</b> remembers herb and ore spots; the compass shows the nearest</li>
+    <li><b>GatherMate2 Data</b> every known herb and ore spawn spot, imported into GatherMate2</li>
+    <li class="own"><b>Zone Bar</b> <span class="tag own">setup helper</span> With Hide Anything hiding the minimap: takes the zone name (world map, clock), calendar, tracking button and mail icon out of it, each Shift-dragged to its own place (first under the bag bar), and hides the AddOns button and day/night dial. Keeps the hidden minimap cluster from coming back half-faded. With the minimap on, nothing changes.</li>
+  </ul>
+</details>
+<details class="part" id="part-compass-bar">
+  <summary><span class="part-name">Compass bar</span><span class="part-about">With Compass or Both (the Exploration question): a compass bar at the top of the screen and its markers.</span><span class="count">3 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>Compass Bar</b> a compass bar at the top: quests, party, gathering spots</li>
+    <li class="own"><b>Compass Plus</b> <span class="tag own">setup helper</span> Extras for Kedge&#39;s Compass: markers for quest givers, townsfolk, dungeons, books, campfires, herbs and ore, guards&#39; directions, arrivals and known flight paths. Each part switches off per character in Forever Settings.</li>
+    <li class="own"><b>Compass Quick Menu</b> <span class="tag own">setup helper</span> Right-click Compass Bar for a menu to switch marker types on and off, pick ranges, and limit incomplete and completed quests separately (the active quest always shows). Shift+wheel on the bar (or a key binding) switches filters: All, Quests, Gathering, Town, Clean. The marker you face shows its name and distance; near markers draw larger. Also /cqm.</li>
+  </ul>
+</details>
+<details class="part" id="part-cinematic-nameplates">
+  <summary><span class="part-name">Cinematic nameplates</span><span class="part-about">With Cinematic nameplates (the Nameplates question): your target&#39;s buffs, power and menu on its plate.</span><span class="count">2 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li class="own"><b>Plates Plus</b> <span class="tag own">setup helper</span> Extras for nameplates: your target&#39;s buffs, power bar, target and menu, the quest mark, friendly health bars in fights and faction crests. Each part switches off per character in Forever Settings.</li>
+    <li class="own"><b>Stripped Unit Frames</b> <span class="tag own">setup helper</span> Keeps the player and target frame parts Cinematic&#39;s Unit Frames page hides hidden on mouseover too.</li>
+  </ul>
+</details>
+<details class="part" id="part-cinematic-camera">
+  <summary><span class="part-name">Cinematic camera</span><span class="part-about">With the cinematic camera (the Camera question): the camera zooms out in the open, closes in indoors and turns to NPCs who talk to you.</span><span class="count">2 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Full experience</span> <span class="tag">Gameplay only</span> <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>DynamicCam</b> a more dynamic camera (zooms and shoulder offset by situation)</li>
+    <li class="own"><b>DialogueUI Camera Hold</b> <span class="tag own">setup helper</span> Keeps DialogueUI&#39;s camera framing while a trainer, bank or other service window from the same NPC is open.</li>
+  </ul>
+</details>
+<details class="part" id="part-shamanpower">
+  <summary><span class="part-name">ShamanPower</span><span class="part-about">Only if you say yes (asked when you may have a shaman): a totem bar with timers.</span><span class="count">2 addons</span></summary>
+  
+  <p class="in">In: <span class="tag">Let me pick</span></p>
+  <ul class="addons">
+    <li><b>ShamanPower</b> a totem bar with timers and one-click totem drops</li>
+    <li class="own"><b>ShamanPower No Corpses</b> <span class="tag own">setup helper</span> ShamanPower&#39;s totem bar ignores dead targets (no bar while skinning or looting) and stays up out of combat while any totem is down or you are in a dungeon or raid. Shrinks its Drop All button, a fixed 26x26 with no size option.</li>
+  </ul>
+</details><!-- /gen:parts -->
+</section>
+
+<section id="helpers">
+  <h2>The setup's helper addons</h2>
+  <p class="intro">Small addons made for this setup: fixes between addons, extras for the compass, nameplates and map, the profession journals, the Menagerie card game and the Journey page's recorder. They come with the part they serve. Each one switches on and off per character in game: <i>Options &gt; AddOns &gt; Forever Settings</i>.</p>
+<!-- gen:helpers --><ul class="helpers"><li><b>Awlmanac</b> <span class="tag">Profession journals</span><br>A leatherworker&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /awlmanac, a key binding or the minimap button opens the book.</li>
+<li><b>Bartender Cine Hover</b> <span class="tag">Action bars</span><br>Lets Cinematic&#39;s mouseover bring back faded Bartender4 bars, whose own frames are only 1x1.</li>
+<li><b>Clothbound</b> <span class="tag">Profession journals</span><br>A tailor&#39;s journal. Every piece you sew is written down; first kinds, new pieces, titles and badges get a paper toast, and /clothbound, a key binding or the minimap button opens the book.</li>
+<li><b>Cogitations</b> <span class="tag">Profession journals</span><br>An engineer&#39;s journal. Every build you make is written down; first kinds, new builds, titles and badges get a paper toast, and /cogitations, a key binding or the minimap button opens the book.</li>
+<li><b>Compass Plus</b> <span class="tag">Compass bar</span><br>Extras for Kedge&#39;s Compass: markers for quest givers, townsfolk, dungeons, books, campfires, herbs and ore, guards&#39; directions, arrivals and known flight paths. Each part switches off per character in Forever Settings.</li>
+<li><b>Compass Quick Menu</b> <span class="tag">Compass bar</span><br>Right-click Compass Bar for a menu to switch marker types on and off, pick ranges, and limit incomplete and completed quests separately (the active quest always shows). Shift+wheel on the bar (or a key binding) switches filters: All, Quests, Gathering, Town, Clean. The marker you face shows its name and distance; near markers draw larger. Also /cqm.</li>
+<li><b>DialogueUI Camera Hold</b> <span class="tag">Cinematic camera</span><br>Keeps DialogueUI&#39;s camera framing while a trainer, bank or other service window from the same NPC is open.</li>
+<li><b>Elixicon</b> <span class="tag">Profession journals</span><br>An alchemist&#39;s journal. Every potion, elixir and flask you brew is written down; first kinds, new brews, titles and badges get a paper toast, and /elixicon, a key binding or the minimap button opens the book.</li>
+<li><b>First Login Setup</b> <span class="tag">Core</span><br>Sets the game options and addon profiles the installer picked, once on each character.</li>
+<li><b>Forever Settings</b> <span class="tag">Core</span><br>Options &gt; AddOns &gt; Forever Settings: every helper&#39;s options on pages (this character, compass, nameplates, map and photos, interface), and per addon the setup&#39;s settings or your own.</li>
+<li><b>Forever Tweaks</b> <span class="tag">Core</span><br>Small fixes to the game&#39;s own frames: cards above Cinematic, the player frame while you eat, Glass&#39;s edit box, combat state text, corpse plates and raid frame health. Each part switches off per character in Forever Settings.</li>
+<li><b>Forgery</b> <span class="tag">Profession journals</span><br>A blacksmith&#39;s journal. Every piece you make is written down; first kinds, new pieces, titles and badges get a paper toast, and /forgery, a key binding or the minimap button opens the book.</li>
+<li><b>Gauzette</b> <span class="tag">Profession journals</span><br>A medic&#39;s journal. Every bandage and remedy you make is written down; first kinds, new makes, titles and badges get a paper toast, and /gauzette, a key binding or the minimap button opens the book.</li>
+<li><b>Hidebound</b> <span class="tag">Profession journals</span><br>A skinner&#39;s journal. Every beast you skin is written down; first kinds of beast, new hides, titles and badges get a paper toast, and /hidebound, a key binding or the minimap button opens the book.</li>
+<li><b>Journey Icons</b> <span class="tag">Journey &amp; memories</span><br>Records the icon file of every item and class in Social Diary and BiS Memories, plus item names, race and faction, dungeon boss portraits and the route&#39;s map art, and logs profession milestones, plus the fish Pagle counted, your guild (members, changes, event log, news), your gold and reputation over time, the quests in your log, what you craft, skin, mine and pick, your jumps, hearthstone uses and repair bills, and the gear you wear with its enchants, for the Journey story page. Shows nothing in game.</li>
+<li><b>Map Plus</b> <span class="tag">Quests &amp; map</span><br>Extras for the world map: drag OpenMap with Cinematic&#39;s camera, dungeon maps from the Forever Dungeon Journal, Questie pins on the world map, and townsfolk icons hidden until you explore their area. Each part switches off per character in Forever Settings.</li>
+<li><b>Memories Plus</b> <span class="tag">Journey &amp; memories</span><br>Extras for BiS&gt;Memories: a faster album page, Cinematic&#39;s look kept in photos, and a photo when Social Diary greets someone again. Each part switches off per character in Forever Settings.</li>
+<li><b>Menagerie</b> <span class="tag">Extras</span><br>A card binder for the creatures and people of Azeroth. Kills can drop a creature&#39;s card, meeting someone can earn theirs, and playing fills a bar toward packs. /menagerie opens the binder.</li>
+<li><b>Minimap Button Groups</b> <span class="tag">Core</span><br>Sorts MinimapButtonButton&#39;s buttons into folders: Journals &amp; story, Map &amp; world, Look &amp; sound, Tools. Right click a folder to move any button. Shows MinimapButtonButton&#39;s button only while the mouse is on it or its list is open.</li>
+<li><b>Motherlode</b> <span class="tag">Profession journals</span><br>A miner&#39;s journal. Every vein you strike is written down; first veins, new gems, titles and badges get a short toast, and /motherlode (or a key binding) opens the book. A minimap button opens it too.</li>
+<li><b>Plates Plus</b> <span class="tag">Cinematic nameplates</span><br>Extras for nameplates: your target&#39;s buffs, power bar, target and menu, the quest mark, friendly health bars in fights and faction crests. Each part switches off per character in Forever Settings.</li>
+<li><b>Potluck</b> <span class="tag">Profession journals</span><br>A cook&#39;s journal. Every dish you cook is written down; first kinds, new dishes, titles and badges get a paper toast, and /potluck, a key binding or the minimap button opens the book.</li>
+<li><b>ShamanPower No Corpses</b> <span class="tag">ShamanPower</span><br>ShamanPower&#39;s totem bar ignores dead targets (no bar while skinning or looting) and stays up out of combat while any totem is down or you are in a dungeon or raid. Shrinks its Drop All button, a fixed 26x26 with no size option.</li>
+<li><b>Spellbound</b> <span class="tag">Profession journals</span><br>An enchanter&#39;s journal. Every enchant, make and disenchant is written down; first kinds, new finds, titles and badges get a paper toast, and /spellbound, a key binding or the minimap button opens the book.</li>
+<li><b>Spoken + Lore Forever Bridge</b> <span class="tag">Spoken</span><br>Keeps Spoken and Lore Forever from talking over each other, and shows Lore Forever&#39;s chat hints on screen while chat is faded.</li>
+<li><b>Stripped Unit Frames</b> <span class="tag">Cinematic nameplates</span><br>Keeps the player and target frame parts Cinematic&#39;s Unit Frames page hides hidden on mouseover too.</li>
+<li><b>Thymeline</b> <span class="tag">Profession journals</span><br>A herbalist&#39;s journal. Every herb you pick is written down; first herbs, new pressings, titles and badges get a paper toast, and /thymeline, a key binding or the minimap button opens the book.</li>
+<li><b>Weather Button Bridge</b> <span class="tag">Atmosphere</span><br>Puts Weather&#39;s forecast button into MinimapButtonButton, which can&#39;t collect Weather&#39;s own unnamed button.</li>
+<li><b>WIM Bag Button</b> <span class="tag">Whisper windows</span><br>A WIM button right of the Bartender4 bag bar (or on screen without Bartender4), since WIM&#39;s own button sits on the hidden minimap. Keeps whispers in WIM by turning off Glass&#39;s whisper windows and whisper tabs.</li>
+<li><b>Zone Bar</b> <span class="tag">Compass, minimap hidden</span><br>With Hide Anything hiding the minimap: takes the zone name (world map, clock), calendar, tracking button and mail icon out of it, each Shift-dragged to its own place (first under the bag bar), and hides the AddOns button and day/night dial. Keeps the hidden minimap cluster from coming back half-faded. With the minimap on, nothing changes.</li></ul><!-- /gen:helpers -->
+</section>
+
+<section id="journey">
+  <h2>The Journey story page</h2>
+  <div class="journey">
+    <div>
+      <p>Your character's journey as one long web page: the route on the map, every day played, levels, deaths and close calls, quests, dungeons with their bosses and loot, the people you met, professions, gold, photos of your moments and a closing epilogue. It is built on your PC from what the addons below record while you play; nothing is uploaded.</p>
+      <p>Build it with <b>Build Journey.bat</b> in the <code>Journey</code> folder of your game. <b>Journey only</b> brings just the addons it reads and keeps the rest of your own setup.</p>
+      <p><a class="btn" href="journey-example.html" target="_blank" rel="noopener">Open an example page</a></p>
+      <p class="small">The example is made-up data: 60 play days of an invented Tauren Shaman, from level 1 to 60, built from the game's real quests and zones. It is large (about 11 MB), give it a moment.</p>
+    </div>
+  </div>
+  <table class="sources">
+    <caption>What each addon adds to the page</caption>
+<!-- gen:journey --><tr><th>Social Diary</th><td>The backbone: route, days, levels, deaths, close calls, quests, people, world PvP. Always in: no page without it.</td></tr>
+<tr><th>Journey Icons</th><td>A setup helper: item icons and names, map art, professions, crafting and gathering, gold, reputation, guild. Always in.</td></tr>
+<tr><th>BiS&gt;Memories</th><td>Photos of your moments, the gear you wore and new-gear lines. It takes a screenshot when something worth remembering happens.</td></tr>
+<tr><th>Leatrix Maps</th><td>Paints the areas you explored onto the zone maps. Installed switched off: only its file is read, your own map stays the map.</td></tr>
+<tr><th>Dungeon Journal</th><td>Boss-by-boss dungeon run cards with loot and boss portraits, flight paths and time in the air.</td></tr>
+<tr><th>Profession journals</th><td>Pagle for fishing and a journal for each profession: your catches, firsts, badges, legends and signed books.</td></tr>
+<tr><th>Weather</th><td>The rain you travelled through (wettest place, time in rain).</td></tr>
+<tr><th>Lore Forever</th><td>Lore you uncovered, the questions you asked, zone visits. A narrator that speaks in game; about 190 MB, and about 2 seconds more loading when you log in.</td></tr>
+<tr><th>Spoken</th><td>Places, stories, boss stories and books you heard. Reads quests and books aloud in game; a big download (over 1 GB of voices).</td></tr>
+<tr><th>Questie</th><td>The quest helper (givers, objectives and turn-ins on the map). The page reads its quest log: which quests, where and when.</td></tr>
+<tr><th>Auctionator</th><td>The auction house helper. The page reads what you listed and sold.</td></tr>
+<tr><th>BagBrother</th><td>Remembers each character&#39;s gold and bags: the data part of Bagnon, without its bag windows. The page&#39;s account part reads it.</td></tr>
+<tr><th>Manners</th><td>Buffs back whoever buffed you in one click and keeps a favour ledger. The page reads the ledger: who buffed you and what you gave back.</td></tr>
+<tr><th>Menagerie</th><td>The setup&#39;s creature card game: the cards you found, your battles, duels and Warband expeditions.</td></tr><!-- /gen:journey -->
+  </table>
+</section>
+
+<section id="faq">
+  <h2>Questions</h2>
+  <details class="help"><summary>What do I need?</summary><p>Windows, World of Warcraft with the <code>_forever_</code> client, and the CurseForge app installed and logged in. Mac and Linux are not supported.</p></details>
+  <details class="help"><summary>What does it change on my PC?</summary><p>It adds addons to <code>_forever_\Interface\AddOns</code> (through CurseForge, plus the helper addons), writes the settings you agree to in <code>_forever_\WTF</code>, and keeps a backup folder in <code>_forever_</code> for snapshots. The setup's own files sit in the <b>Forever Setup</b> folder next to the file you downloaded. Since 1.2.6 it also adds a small per-user link handler so the buttons on this page can start Update.bat and Install.bat; no admin rights are needed for any of it.</p></details>
+  <details class="help"><summary>Will it overwrite my settings?</summary><p>Only where you say so. For every addon you choose the installer's settings or your existing ones, and addons with profiles can take the installer's as an extra profile beside yours. In game, <i>Options &gt; AddOns &gt; Forever Settings</i> switches each addon between the two at any time. Your sound and graphics settings, key bindings and macros are never touched.</p></details>
+  <details class="help"><summary>Can I undo it?</summary><p>Yes. Every install saves a snapshot first. <b>Uninstall.bat</b> in the Forever Setup folder removes the whole setup, goes back to any snapshot, takes single parts out, or gives you your own settings back for some addons. Your progress (Lore Forever journey, key bindings, macros) always stays.</p></details>
+  <details class="help"><summary>Can I try it on one character first?</summary><p>Yes. The installer asks which characters get the setup; the others keep its addons switched off. Run Install.bat again later to add more.</p></details>
+  <details class="help"><summary>How do updates work?</summary><p>The addons update through the CurseForge app like any other. The setup's helpers and installer update with <b>Update now</b> above (or Update.bat), which says what's new and leaves your settings alone. New addons and new questions come through the installer, which Update.bat offers when there are any.</p></details>
+  <details class="help"><summary>Which setup should I pick?</summary><p><b>Full experience</b> if you want the setup as it was made to be played, voices included. <b>Gameplay only</b> is the same without the narration voices, a much smaller download. <b>Journey only</b>, <b>Narration only</b> and <b>Menagerie only</b> add just that to your own addons and leave your settings alone. <b>Let me pick</b> lists every addon one by one.</p></details>
+  <details class="help"><summary>Does it slow down logging in?</summary><p>A little. Lore Forever is the slowest addon (about 2 seconds more at login), which is why it is optional; Atlas adds about 0.3 seconds and Narcissus about 0.6.</p></details>
+  <details class="help"><summary>Something went wrong. What do I send?</summary><p>The installer writes <code>install-log.txt</code>, Update.bat <code>update-log.txt</code>, in the Forever Setup folder. Send that file to the friend who sent you the setup. Many common problems are answered under Help below.</p></details>
+</section>
+
+<section id="new">
+  <h2>What's new</h2>
+<!-- gen:whatsnew --><details class="ver" open><summary>1.2.6 (2026-11-22)</summary><ul><li>A downloads page: https://tgabrielc.github.io/forever-setup/ . Each setup there has its own download, which starts the installer on that setup. Once the setup is on your PC, the page&#39;s &quot;Update now&quot; and &quot;Change my answers&quot; buttons start Update.bat or Install.bat from your setup folder (your browser asks first). Update.bat or the installer sets those buttons up; removing the whole setup takes them away.</li><li>Extras now also holds Manners (one click buffs back whoever buffed you, and passers-by missing your buff) and Ackis Recipe List with its nine profession data addons (every recipe of your professions, known or not, and where to learn it: /arl). New addons load after a full game restart. Menagerie only is unchanged.</li><li>Journey only now also offers BagBrother (each character&#39;s gold and bags, for the page&#39;s account part; the data half of Bagnon, without its bag windows) and Manners (the favour ledger), ticked at first on a new setup. An earlier Journey only setup keeps what it had: tick them in the journey list (&quot;Change my answers&quot;).</li><li>Left out means gone: an addon you untick (or whose part you untick) is now removed from your AddOns folder, CurseForge addons with their extra folders too, so the CurseForge app stops updating them. This counts for addons you had before the setup as well. The summary lists them before anything happens; your settings for them stay, and ticking one again on a later run brings it back. Journey only removes only what you untick in its list (the voices start ticked if you have them); Narration only and Menagerie only leave the rest as it is.</li><li>Update.bat cleans up too: an addon your picks leave out that an earlier setup only switched off is removed. Addons you had before the setup are only removed by the installer, after its summary names them.</li><li>Fewer helper folders: 30 small helpers now live in five, Compass Plus, Plates Plus, Map Plus, Memories Plus and Forever Tweaks. Each old helper is a part you switch per character in Options &gt; AddOns &gt; Forever Settings. Your settings for them move over, and one you had switched off or left out stays off. The old folders are removed. The BiS&gt;Memories album page now opens from Interface\AddOns\MemoriesPlus\BiSMemoriesAlbum\Album.</li><li>Stripped Unit Frames comes only with Cinematic&#39;s nameplates: pick the original nameplates and target frame and it is not installed (an earlier setup&#39;s copy is removed), so the player and target frames stay whole.</li><li>Dialogue UI is no longer set up by the installer: it starts with its own defaults, for you to set as you like in its options. A setup that already has the installer&#39;s keeps them; Options &gt; AddOns &gt; Forever Settings switches Dialogue UI back to your own.</li></ul></details>
+<details class="ver"><summary>1.2.5 (2026-11-19)</summary><ul><li>Bartender4 left Core for its own part, Action bars: untick it in the parts list to keep the game&#39;s own action bars. Earlier setups with Core keep it.</li><li>New setup &quot;Let me pick&quot;: no bundles. After the look-and-feel questions (compass or minimap among them), every addon is in one list to tick or untick. Its voice packs, map modules and the helper addons made for it come with each one; switch any of those off in game if you like.</li><li>New setup &quot;Menagerie only&quot;: just the Menagerie card game, nothing else, no settings.</li><li>Full experience and Gameplay only no longer have their own addon lists: they are the bundles. To leave out single addons, pick &quot;Let me pick&quot;.</li><li>Journey only now also offers Questie, Auctionator and Menagerie (the Journey pages read them too), ticked at first on a new setup. Spoken and Lore Forever stay unticked until you tick them: they are large. An earlier Journey only setup keeps what it had.</li></ul></details>
+<details class="ver"><summary>1.2.4 (2026-11-18)</summary><ul><li>&quot;Let me choose each&quot; now asks which CurseForge addons of your parts to install. Untick any you don&#39;t want: it isn&#39;t installed, and the helper addons made for it are left out with it (Update.bat leaves them out too). Cinematic, and Hide Anything with the compass alone, are always installed: the rest of the setup leans on them.</li><li>The summary&#39;s &quot;Left out&quot; line lists the addons and helpers you left out.</li></ul></details>
+<details class="ver"><summary>1.2.3 (2026-11-18)</summary><ul><li>Addons with profiles (Bartender, DynamicCam, Glass, Questie, Spoken, ShamanPower): when you have your own settings, the installer&#39;s now go in beside yours as a profile to try, and your characters keep using yours. &quot;Add as a profile and use it&quot; and &quot;Replace&quot; are still there to pick.</li><li>Running the installer again no longer switches back on an addon you switched off yourself.</li><li>Lists show addon names (Zone Bar, Compass Quick Menu) instead of folder names, in the installer and the uninstaller.</li><li>Keeping your own Cinematic settings? The summary says that the nameplate, fade and camera picks then change nothing.</li><li>Leaving out a core addon while CurseForge installs asks once more first.</li><li>The end screen says which folder Update.bat, Install.bat and Uninstall.bat are in, and names Leatrix Maps only when the setup brought it.</li></ul></details>
+<details class="ver"><summary>1.2.2 (2026-11-18)</summary><ul><li>The installer&#39;s settings are settings only now. the setup author&#39;s own records no longer come along: which addons and frames his addons found, his camera speeds, quest givers and dungeon NPC spots they learned, his ShamanPower setups, which quest items he saw, which characters use which profile, and the tips, news and welcome screens he already read. Your addons show you their own tips and news the first time.</li><li>Taking the installer&#39;s settings no longer wipes your own records of these: what your addons found, learned and showed you stays yours, on the first install and on later runs.</li><li>Your characters switch to the installer&#39;s Spoken profiles too, not only Bartender&#39;s, when the installer&#39;s settings replace yours.</li><li>Lueur&#39;s settings are not part of the setup for now: Lueur keeps its own until it is checked against its new version.</li></ul></details>
+<details class="ver"><summary>1.2.1 (2026-11-18)</summary><ul><li>Fewer helpers: Minimap Button Button Hover is now part of Minimap Button Groups, ShamanPower Small Drop All part of ShamanPower No Corpses, and Mail Widget is gone: Zone Bar holds the mail icon, and Combat State Text floats &quot;New mail&quot; for everyone. Had you left one of the old ones out? Update.bat says which helper took it over.</li><li>Helpers taken out of the setup are now removed from your game by Update.bat and the installer, even after running Forever Setup.bat again.</li><li>The installer waits for WoW to be closed again before it copies helpers and settings, in case the game was started during the long downloads.</li><li>An install that stops half-way no longer mixes up the installer&#39;s settings files with your own when you later put your own back.</li><li>Update.bat keeps a log, update-log.txt, to Send when something goes wrong.</li></ul></details>
+<details class="ver"><summary>1.2.0 (2026-11-17)</summary><ul><li>Clearer parts. Narration is now two: Spoken, and Lore Forever. Lore Forever is optional: it is large (about 190 MB plus its website voice packs) and the slowest addon of the setup, about 2 seconds more loading when you log in, so no preset ticks it. Atlas is optional too (Dungeon Journal already shows dungeon maps and loot). Whisper windows (WIM) and Journey &amp; memories (Social Diary, memory photos, Journey pages) are parts of their own; Extras keeps Narcissus and Menagerie. Already installed? You keep everything you had.</li><li>Zone Bar and Mail Widget only come with the minimap hidden (the compass alone).</li><li>First install: after the parts, &quot;Use the recommended answers&quot; goes straight to the summary, where you see every pick; &quot;Change my answers&quot; there still asks each question.</li><li>Quieter installer: each step lists what it did in a line or two, warnings stand out, and a short numbered list at the end says what is left to do in the game.</li><li>Uninstall.bat starts with &quot;Remove the whole setup&quot;; earlier snapshots are one choice further, so taking out parts or putting back your own settings is easy to find.</li></ul></details>
+<details class="ver"><summary>1.1.2 (2026-11-16)</summary><ul><li>Characters you left out in the installer now stay left out after Update.bat too: a helper addon it brings (a new journal, say) is switched off on them, as the installer does. Install.bat again and tick a character to switch everything on for it.</li></ul></details>
+<details class="ver"><summary>1.1.1 (2026-11-16)</summary><ul><li>Journey story pages: each journal&#39;s firsts, badges and legends are day lines, and a Profession journals part sits on The character shelf; Menagerie cards get theirs too. Journey only: Pagle&#39;s line is now &quot;Profession journals&quot;, Pagle and every journal.</li></ul></details>
+<details class="ver"><summary>1.1.0 (2026-11-16)</summary><ul><li>New part &quot;Profession journals&quot;: Pagle for fishing, now joined by my journal addons, one per profession: Motherlode (mining), Hidebound (skinning), Thymeline (herbalism), Awlmanac (leatherworking), Potluck (cooking), Forgery (blacksmithing), Gauzette (first aid), Elixicon (alchemy), Spellbound (enchanting), Clothbound (tailoring) and Cogitations (engineering). Each keeps a book of what you gather or make, with toasts and badges; a minimap button opens it. Already installed? Update.bat brings them. If you had left fishing out, Pagle stays out. Untick any journal in the installer&#39;s helper addons list.</li><li>Journals and the other story buttons share one folder in the minimap button list.</li><li>New in Extras: Menagerie, my card binder. Every creature and character has a card: kills can drop one, meeting a character can earn theirs, and kills, quests and levels fill a bar toward packs of that place&#39;s album. /menagerie opens the binder; /menagerie preview shows what a legendary card does. Already installed with Extras? Update.bat brings it.</li></ul></details>
+<details class="ver"><summary>1.0.9 (2026-11-15)</summary><ul><li>New setup choice &quot;Journey only&quot;, for players who keep their own addons and only want the Journey story pages. You tick which addons record your journey: Social Diary and A setup helper Journey Icons (always), BiS&gt;Memories, Leatrix Maps (switched off: the pages only read its file), Dungeon Journal, Pagle, Weather, and, unticked at first because they speak in game and are big downloads, Lore Forever and Spoken. No settings are touched. The pages also use Questie and Auctionator when you have them. Play, log out, then Interface\AddOns\JourneyIcons\Build Journey.bat.</li></ul></details>
+<details class="ver"><summary>1.0.8 (2026-11-15)</summary><ul><li>Already installed? The installer keeps your last answers and goes straight to the summary: &quot;Install now&quot;, or &quot;Change my answers&quot; to go through the questions.</li><li>Your WoW folder is asked once and remembered for Install, Update and Uninstall (game-folder.txt next to them; delete it to pick another).</li><li>An addon you never want: when the installer has waited 2 minutes for it, answer N (&quot;never&quot;). Update.bat stops naming it as missing. To get it after all, tick it at the end of the installer&#39;s helper addons list.</li><li>From now on, use Update.bat for everything new; Forever Setup.bat is only for the first time.</li></ul></details>
+<details class="ver"><summary>1.0.7 (2026-11-14)</summary><ul><li>Compass without the minimap now brings GatherMate2 and its data: every known herb and ore spawn spot, imported at your first login. My new helper Compass GatherMate shows the nearest ones on the compass with their icon and distance. Switch it in the compass menu (Gathering &gt; Herbs and ore (GatherMate2)); &quot;Only my professions&quot; there applies to it too. These are spots where nodes grow, not ones that are up right now. Minimap or Both: no GatherMate2. Run the installer to get it through the CurseForge app.</li><li>Addons updated to their newest versions, NodeSight 3 among them (sparkles on nearby herbs and ore). The NodeSight Minimap Fix helper is gone: Update.bat takes it out.</li><li>The Journey pages question now recommends a relog first (open WoW, log in, log out), so the pages are built from your newest data. The window waits for you.</li></ul></details>
+<details class="ver"><summary>1.0.6 (2026-11-14)</summary><ul><li>Compass Live Nodes is gone: since a game update it could no longer see the herbs and ore on the minimap, so it showed nothing, and on some PCs it filled chat with errors. Update.bat takes it out. Spots where you gathered before still show grey on the compass.</li></ul></details>
+<details class="ver"><summary>1.0.5 (2026-11-13)</summary><ul><li>Extras now brings Leatrix Maps, installed switched off: the Journey pages read its map of explored areas to paint where you have been onto each zone map. OpenMap stays your map. Update.bat names it as missing; run the installer to get it through the CurseForge app.</li></ul></details>
+<details class="ver"><summary>1.0.4 (2026-11-13)</summary><ul><li>New question in the installer: which of the setup&#39;s helper addons to keep. Untick any you don&#39;t want: it is left out, and Update.bat stops bringing it. Your answers are remembered.</li><li>Settings per addon now says when a helper sets something in that addon even if you keep your existing settings (WIM Bag Button in Glass, Compass Quick Menu in Compass Bar), so you can leave that helper out instead.</li><li>Update.bat still never changes your settings: it only brings the helpers you kept.</li></ul></details>
+<details class="ver"><summary>1.0.3 (2026-11-13)</summary><ul><li>Journey story pages: a web page per character with the route on the map, dungeon runs, photos, gear, fishing and more, from what the addons saved while you played. The installer and Update.bat now offer to build them at the end (or run Build Journey.bat in Interface\AddOns\JourneyIcons). The first build downloads Python and two tools (about 30 MB) into the Journey folder, after asking.</li><li>Helper fixes Update.bat brought since 1.0.0 (you may have them already): - Target Plate Target 1.1.0: gold corners on the plate of your target&#39;s target. - Target Plate Auras 1.2.1: the game&#39;s own debuff row under the target row is hidden. - ShamanPower No Corpses 1.1.0: the totem bar stays up out of combat in dungeons and raids. - Compass Quest Givers 1.2.0: quests show on the continent&#39;s other zone maps too, and a selected quest Questie has no spots for uses the game&#39;s own spot. - Compass Quick Menu 1.2.0: clicking leaves Compass Bar&#39;s own quest markers to Compass Bar. - Questie World Pins 1.1.1: works with Questie 12.8 again.</li></ul></details>
+<details class="ver"><summary>1.0.2 (2026-11-13)</summary><ul><li>New helper in Extras: Journey Icons. At login it notes which icon each item in Social Diary and BiS Memories uses, for the setup&#39;s journey story page. It shows nothing in game.</li></ul></details>
+<details class="ver"><summary>1.0.1 (2026-11-12)</summary><ul><li>The installer now brings this week&#39;s addon versions (Questie 12.8, Cinematic 2.0.89, Compass Bar 1.9.2, NodeSight 2.0.7, OpenMap 0.8.6, Lore Forever 1.7.0 and 31 more). Run the installer again to update the addons you have to them.</li><li>The compass helpers work with Questie 12.8 again (they had switched themselves off).</li></ul></details>
+<details class="ver"><summary>1.0.0 (2026-11-11)</summary><ul><li>First numbered version. The version shows at the top of the installer, Update.bat and Uninstall.bat; Update.bat shows what&#39;s new since the version you have.</li><li>The installer asks everything first, in four groups (setup and parts, look and feel, settings per addon, characters), then shows a summary of your picks and what happens next. Nothing is written, and WoW can stay open, until you pick &quot;Install now&quot;. &quot;Cancel&quot; leaves everything as it was.</li><li>The settings list says when your picks adjust an addon&#39;s settings (minimap shown, original nameplates, interface always shown, standard camera).</li><li>With &quot;Both&quot; (compass and minimap), Hide Anything is no longer locked ticked.</li><li>Helpers left out because their addon is not in your setup say &quot;not needed&quot; instead of a warning.</li><li>Uninstall.bat has a Cancel option, and its &quot;Go ahead?&quot; starts on Cancel.</li></ul></details><!-- /gen:whatsnew -->
+</section>
+
+<section id="help">
+  <h2>Help</h2>
+  <p class="intro">The README and troubleshooting notes that come with the setup.</p>
+<!-- gen:help --><details class="help"><summary>Which File Do I Run?</summary><pre>  Forever Setup.bat   once, the first time: gets the newest setup, then installs it
+  Update.bat          from then on: my latest fixes and new versions of this setup
+                      (it says what&#39;s new and offers the installer when needed)
+  Install.bat         to change your answers (parts, look, settings, characters)
+  Uninstall.bat       to remove the whole setup, go back to an earlier snapshot, take
+                      parts out, or get your own settings back for some addons
+The last three are in the &quot;Forever Setup&quot; folder. Your WoW folder is asked once and
+remembered there (game-folder.txt; delete it to pick another).
+Have the CurseForge app installed and logged in: the addons come through it, so they
+update later like any other.</pre></details>
+<details class="help"><summary>What The Installer Asks (Arrow Keys, Space To Tick, Enter)</summary><pre>Grey lines under each list explain the highlighted line. Nothing is written until
+&quot;Install now&quot;, and a snapshot of your addons and settings is saved first.
+
+1. Which setup:
+     Full experience  every part except the optional ones, with Spoken narration
+     Gameplay only    the same without the voices (much smaller)
+     Narration only   Spoken + Lore Forever and a helper that stops them talking
+                      over each other; your existing settings stay as they are
+     Journey only     keep your own addons: every addon the Journey story pages
+                      read (you tick which; Spoken and Lore Forever start unticked,
+                      they are large). No settings are touched
+     Menagerie only   just my Menagerie card game: nothing else, no settings
+     Let me pick      no bundles: the look-and-feel questions (compass or minimap
+                      among them), then every addon in one list. Its voice packs
+                      and my helpers for it come with each one
+2. Which parts (Full and Gameplay): tick any in or out. Core is always in.
+     Quests &amp; map, Gathering, Profession journals, Bags &amp; auction, Whisper windows,
+     Journey &amp; memories, Atmosphere, Spoken, Extras
+   Optional, unticked unless you tick them:
+     Atlas          dungeon and raid maps; Dungeon Journal already covers most of it
+     Lore Forever   a narrator for the lore around you. Large (about 190 MB, plus
+                    voice packs from its website) and the slowest addon here: about
+                    2 seconds more loading when you log in
+3. &quot;Use the recommended answers&quot; (the setup as I play it, straight to the summary) or
+   &quot;Let me choose each&quot;:
+     Exploration     Compass (minimap hidden), Minimap, or Both
+     Nameplates      Cinematic, or the game&#39;s original ones
+     Interface       fades between fights, or always shown
+     Camera          cinematic, or standard (all yours)
+     Left click      targets only, or also interacts
+     Game options    numbers on health/mana bars, no resource bar under you
+     ShamanPower     only asked when you may have a shaman
+     Settings        per addon: the installer&#39;s settings, or keep your existing ones.
+                     Ones you already have settings for start unticked. For addons with
+                     profiles (Bartender4, DynamicCam, Glass, Questie, Spoken,
+                     ShamanPower) the installer&#39;s can go in beside yours as a profile
+     Characters      which get the setup (the others keep it switched off)
+4. The summary of every pick: &quot;Install now&quot;, &quot;Change my answers&quot; or &quot;Cancel&quot;.
+
+None of it is final: run Install.bat again, or in the game use Options &gt; AddOns &gt;
+Forever Settings, which says what each addon&#39;s settings do and switches each between the
+installer&#39;s and your own. Each character sets its game options and action bars by itself
+on its first login (A setup helper First Login Setup), so there is nothing to paste.</pre></details>
+<details class="help"><summary>Updating</summary><pre>Double-click Update.bat. It gets my latest helper addons and the newest installer, and
+leaves your settings alone. New addons can&#39;t come through it: it names any you don&#39;t
+have yet and offers the installer, which gets them through the CurseForge app. Restart
+WoW afterwards. Newer versions of the CurseForge addons themselves: &quot;Update All&quot; in the
+CurseForge app.
+Already installed and running the installer again? It keeps your last answers and goes
+straight to the summary. Only what changed in the installer&#39;s settings since last time
+goes over yours, so your own tweaks stay (Lore Forever only ever gets my options; your
+journey stays).
+An addon you never want: when the installer has waited 2 minutes for it, answer N
+(&quot;never&quot;). To get it after all, pick &quot;Let me pick&quot; and tick it there.</pre></details>
+<details class="help"><summary>Undoing</summary><pre>Double-click Uninstall.bat:
+  Remove the whole setup              back to how it was before your first install
+  Go back to an earlier snapshot      every install and undo saves one
+  Take out some parts                 the rest stays
+  Put back your own settings for some addons (the addons stay)
+Your progress always stays: Lore Forever journey, key bindings, macros, sound and
+graphics. Addons the setup added are removed in the CurseForge app (it tells you which).</pre></details>
+<details class="help"><summary>Inside This Zip</summary><pre>  Install.bat / Install.ps1        the installer
+  Update.bat / Update.ps1          the updater
+  Uninstall.bat / Uninstall.ps1    the undo
+  Shared.ps1, Setup-Data.ps1       used by the scripts above (keep them next to them)
+  TROUBLESHOOTING.txt              fixes and tweaks (leave group macro, camera, map...)
+  CHANGELOG.txt                    what changed in each version
+  ADDONS.txt                       every addon folder you should end up with
+  Interface\AddOns\                the small helper addons I made (not on CurseForge)
+  WTF\Account\YOUR_ACCOUNT_FOLDER\SavedVariables\   the installer&#39;s settings</pre></details>
+<details class="help"><summary>Manual Way, If You Prefer (Game Closed For All Of It; No Undo):</summary><pre>1. Install from CurseForge (app or website), for the _forever_ game version:
+     Core (always):
+       BugSack, BugGrabber, Cinematic, Dialogue UI, Glass Forever, Hide Anything,
+       Leatrix Plus, MinimapButtonButton, Mouseover Tooltip, RPGLootFeed
+     Action bars:         Bartender4
+     Camera:              DynamicCam, unless you want the standard camera
+     Exploration:         Compass Bar (Kedge), unless you want only the minimap; with
+                          the minimap hidden also GatherMate2 and GatherMate2 Data
+     Quests &amp; map:        Questie, QuestieDB, OpenMap, DungeonJournal, Librarian
+     Atlas (optional):    Atlas and its Kalimdor &amp; Eastern Kingdoms, Battlegrounds,
+                          Dungeon Locations and Transportation modules
+     Gathering:           NodeSight, Lueur
+     Profession journals: Pagle (fishing), and my journals for mining, skinning,
+                          herbalism and every craft (in this zip)
+     Bags &amp; auction:      Bagnon, Bagnon Battles, Auctionator
+     Whisper windows:     WIM
+     Journey &amp; memories:  Social Diary, BiS&gt;Memories, Leatrix Maps (switched off: the
+                          Journey pages read its map of explored areas)
+     Atmosphere:          Forever Ambient Music Extended, Weather, CozyFire
+     Spoken:              Spoken, Spoken: English and the Spoken Audio packs
+     Lore Forever (optional): Lore Forever, Lore Forever - Female Narrator and its
+                          Horde lands, More People and More Places packs; more voices
+                          from loreforeverwow.com/downloads
+     Extras:              Narcissus, Menagerie (in this zip)
+     Shaman:              ShamanPower, if you play one
+   Then compare your Interface\AddOns folder with ADDONS.txt.
+   Some downloads bring several folders (Bagnon, Narcissus, Questie).
+
+2. Start the game once and log in to any character, then quit.
+   This creates your own account folder.
+
+3. Copy the zip&#39;s &quot;Interface&quot; folder into  World of Warcraft\_forever_\
+   (it only adds A setup helper folders next to the others).
+
+4. Open  World of Warcraft\_forever_\WTF\Account\  and the folder named with your
+   account (numbers or your login name; with several, the one you play on).
+   Back up its SavedVariables folder, then copy every file from the zip&#39;s
+     WTF\Account\YOUR_ACCOUNT_FOLDER\SavedVariables\
+   into it (not the Cases folder: the installer&#39;s other choices). Replace when asked.
+   Already have a Lore Forever journey? Skip LoreForever.lua: it holds only my options
+   and would start your journey over (the installer merges it instead).
+
+5. Start the game. At the character screen click &quot;AddOns&quot; (bottom left), make sure
+   everything in ADDONS.txt is ticked and &quot;Load out of date AddOns&quot; is on.
+
+6. In game, once:
+   - Bartender4 (action bars): type /bt4, go to Profiles and pick the setup&#39;s profile.
+   - Paste this in chat on each character (no personal resource bar, numbers on the
+     bars, left click only targets):
+     /run SetCVar(&quot;nameplateShowSelf&quot;,&quot;0&quot;) SetCVar(&quot;statusText&quot;,&quot;1&quot;) SetCVar(&quot;statusTextDisplay&quot;,&quot;NUMERIC&quot;) SetCVar(&quot;interactOnLeftClick&quot;,&quot;0&quot;)
+   - Spoken picks my profile by itself for new characters. If one looks unset: Spoken
+     options &gt; Profiles &gt; the setup&#39;s profile.
+
+Notes
+  - The installer&#39;s settings are account-wide, so they apply to every character that has
+    the addons on (the installer lets you pick which characters do).
+  - Your keybinds, macros and game options are not touched (only the /run line in step
+    6 changes four game options, when you paste it).
+  - If a CurseForge version is much newer than the one in ADDONS.txt and something looks
+    off, that addon&#39;s settings may have changed format; reset it from its own options.</pre></details>
+<details class="help"><summary>Troubleshooting And Tweaks</summary><pre>Things I ran into while setting this up, and how to change them.
+Two rules that save a lot of confusion:
+  - A NEW addon (or one you just turned on) needs a full game restart. /reload is not enough.
+  - Settings files are only read at login and written at logout, so edit them with the game closed.</pre></details>
+<details class="help"><summary>Installer: Curseforge Opens But Nothing Installs</summary><pre>- &quot;Unable to obtain single instance lock&quot; and &quot;Unable to move the cache: Access is denied&quot;
+  in the installer window are harmless: each install link starts a second CurseForge that
+  hands the addon to the open app and closes.
+- The app needs your WoW Forever folder added (World of Warcraft &gt; version dropdown &gt;
+  add a game install), and should be open on World of Warcraft &gt; Forever.
+- Close the app fully (also from the tray icon by the clock) and run Install.bat again.
+  If you start CurseForge &quot;as administrator&quot;, start it normally instead: the links may
+  not reach an elevated app.
+- Still nothing? Send me what the running app did with the link. Paste this into PowerShell:
+    Get-ChildItem $env:APPDATA,$env:LOCALAPPDATA -Directory -Filter &#39;*curse*&#39; -ErrorAction SilentlyContinue | Get-ChildItem -Recurse -Filter &#39;main-*.log&#39; -ErrorAction SilentlyContinue | Select-String -Pattern &#39;second instance of the app|Processing a uri command&#39; -Context 0,12 | Select-Object -Last 2
+  (A log ending in &quot;Unable to obtain single instance lock&quot; is only the copy that hands the
+  link over; that one is normal.)
+- Fallback: search each addon by name in the app (list in README.txt) and click Install.</pre></details>
+<details class="help"><summary>Changing Your Setup Later</summary><pre>- Want Lore Forever, Atlas (both optional) or another part after all? Run Install.bat again,
+  pick &quot;Change my answers&quot; and tick it in the parts list. Parts you untick: my helpers for them are removed and their
+  CurseForge addons are switched off on your characters. Pick them again and they come back on.
+  To delete a part for good (frees the space, your own settings for it come back): run
+  Uninstall.bat and pick &quot;Take out some parts&quot;.
+- Compass, Minimap or Both: run Install.bat again and pick the other one. Going from the
+  compass to the minimap switches Compass Bar off (it stays in the CurseForge app).
+  In game, the minimap&#39;s hiding is Hide Anything&#39;s &quot;Minimap&quot; row (Esc &gt; Options &gt; AddOns).
+- Nameplates, Cinematic or the original ones: run Install.bat again and pick the other one.
+  Going to the original ones removes my plate helpers (TargetPlateAuras, TargetPlatePower,
+  TargetPlateMenu, FriendlyFightBars).
+- Interface (Faded / Shown), Camera (Cinematic / Standard), Left click (Target / Interact):
+  run Install.bat again and pick the other one. Standard camera switches DynamicCam off and
+  turns off Cinematic&#39;s and Dialogue UI&#39;s own camera moves. Every character picks up the
+  new game options and action bars at its next login.
+- Installer&#39;s settings or your existing ones, per addon: run Install.bat again and tick or
+  untick it in the &quot;Settings per addon&quot; list. Unticking one you had the installer&#39;s for puts back what you had before the first
+  install (or the addon&#39;s defaults if you had nothing); from then on that file is yours and
+  later runs leave it alone. Lore Forever only ever swaps its options: your journey stays.
+  Uninstall.bat does the same without the rest of the questions: &quot;Put back your own settings
+  for some addons&quot; (the addons stay).
+- Installer&#39;s added as a profile (Bartender4, DynamicCam, Glass, Questie, Spoken, ShamanPower): your own profiles
+  are all still there. Switch back in the addon&#39;s options &gt; Profiles (Bartender4: /bt4).
+  Characters you left out of the setup keep their own profile.
+  With your own Cinematic, check in its options that music and chat are left to FAME and
+  Glass (Cinematic&#39;s music and chat handling off), or they fight over them.
+- Which characters have the setup: run Install.bat again and tick them in &quot;Which characters get
+  the setup?&quot; (last time&#39;s unticked ones start unticked). Ticking your main later switches
+  everything back on there. A new character only shows after one login (then quit).
+  A character made after the install starts with every addon on: untick them in its AddOns
+  list, or run Install.bat again. In the AddOns list, pick the character in the list at the top
+  before ticking: &quot;All&quot; changes every character.
+  Not covered by the pick: an addon you already had stays on everywhere and uses the installer&#39;s settings
+  for it if you picked &quot;Replace your existing ones with the installer&#39;s&quot; or it has no profiles, as its settings are
+  account-wide; and game options some addons
+  change (camera, for one) can be shared by all your characters.
+- Gameplay only: the helper SpokenLoreBridge and the Spoken / Lore Forever lines below
+  don&#39;t apply to you.</pre></details>
+<details class="help"><summary>First Login</summary><pre>- A Blizzard warning about &quot;experimental camera&quot; settings pops up: that&#39;s DynamicCam. Accept it.
+  (Not with the Standard camera.)
+- A &quot;First Login Setup&quot; line in chat: A setup helper just set this character&#39;s game options and
+  addon profiles (the setup&#39;s profile for my Bartender4 bars and any addon you took the installer&#39;s
+  as a profile for), once. Running the installer again makes it do so once more only when
+  those answers changed (game options, profiles); otherwise what you changed since stays.
+- Questie shows a &quot;Welcome to Questie&quot; window: click &quot;Questie Objectives&quot;
+  (turns off Blizzard&#39;s own quest markers so you don&#39;t get two sets).
+- The screen looks empty: that&#39;s on purpose. Cinematic fades the UI out of combat
+  (unless you picked Interface: Shown).
+  Move the mouse over the bottom of the screen and the action bars come back
+  (A setup helper BartenderCineHover makes that work with Bartender4).</pre></details>
+<details class="help"><summary>Leave Group Macro (Needed Because The Player Frame Only Shows In Fights; Not With Interface: Shown)</summary><pre>Cinematic shows the player frame in fights only, and with it the right-click menu that has
+&quot;Leave Group&quot;.
+1. Type /macro, click New, name it &quot;Leave Group&quot;, pick any icon.
+2. Paste this line:
+     /run (C_PartyInfo and C_PartyInfo.LeaveParty or LeaveParty)()
+3. Drag it onto an action bar. Clicking it leaves your party or raid.
+Want the player frame shown all the time instead? /cine &gt; Game Frames (under Visibility),
+tick Always on the Player frame row.</pre></details>
+<details class="help"><summary>Ui And Chat</summary><pre>- Chat is faded most of the time (Cinematic). Lore Forever&#39;s zone hints and tips still show
+  as a short line near the top of the screen (A setup helper SpokenLoreBridge).
+- Separate tabs for whispers / party / loot, no addon needed:
+  right-click the General tab &gt; Create New Window, then right-click the new tab &gt; Settings
+  and tick only what belongs there. Untick the same things on General, or you&#39;ll see them twice.
+- Hovering an action bar shows its tooltip but the bars stay hidden:
+  check BartenderCineHover is enabled in the AddOns list.
+- Totem bar (shaman) too small: /bt4 &gt; Totem Bar &gt; General &gt; Scale.
+  If the slider does nothing, untick the Totem Bar module, tick it again, then try again.
+- Want a part of the UI hidden or shown: Hide Anything&#39;s options (Esc &gt; Options &gt; AddOns).
+- Cinematic has no minimap button in my setup: type /cine to open its options.
+- Some icons in MinimapButtonButton fade out with the UI: /cine &gt; Minimap, tick Always on the
+  Addon buttons row.
+- Compass: spots where you gathered herbs and ore before show on the compass in grey. Nodes
+  that are up right now can&#39;t: the game doesn&#39;t tell addons where they are.
+  The small button at the right end of the compass (A setup helper CompassQuickMenu, or /cqm)
+  switches marker types and ranges. Its filters at the top (All, Quests, Gathering, Town,
+  Clean, or your own from &quot;New filter...&quot;) show or hide whole categories; Shift+wheel on
+  the bar flips through them. Hover a filter to pick its categories.
+- Ore, herbs, chests and quest objects glow as you get close: that&#39;s Lueur (type /lueur, or its
+  minimap icon, to change the effect or turn it off).
+  Its music is turned well down (0.06); raise it there if you want more.
+- Tooltips sit in a fixed spot instead of following the mouse: Mouseover Tooltip&#39;s
+  options, &quot;follow cursor&quot;.
+- Loot window: Leatrix Plus&#39;s &quot;Faster looting&quot; is off on purpose, so you can see
+  what you pick up. Auto-loot stays on.</pre></details>
+<details class="help"><summary>Camera</summary><pre>- Camera turns behind you by itself while running:
+  Esc &gt; Options &gt; Gameplay &gt; Controls &gt; Camera Following Style: Never
+  (or type  /console cameraSmoothStyle 0 ).
+  Cinematic can also swing it behind you on flights and while walking; that&#39;s in its camera options.
+- Over-the-shoulder offset (your character a bit off-centre) too strong or not wanted:
+  type /dc (DynamicCam), Standard Settings, lower the shoulder offset (it&#39;s 1; 0 = centred).
+  Dungeons and raids are always centred.
+- Zoom steps too small or too big: /dc &gt; Reactive Zoom &gt; &quot;Standard Mouse Zoom Increments&quot;.
+  Zooming is set to a steady, linear speed.
+- /stare, /kneel and /dance use a &quot;Still&quot; camera: letterbox, but the camera doesn&#39;t move.
+  These emote scenes never start in combat. Change any trigger in /cine, on the Camera
+  Triggers page.
+- Hearthstone and teleports keep their effects, but don&#39;t spin the camera behind you on
+  arrival (&quot;Swing behind you where you arrive&quot; is off on Cinematic&#39;s tele camera page).
+- Talking to trainers, bankers and vendors keeps the dialogue camera until you walk away
+  (A setup helper DialogueCamHold). If it prints an &quot;off&quot; line in chat, it couldn&#39;t hook in;
+  everything else still works, just without that camera hold.</pre></details>
+<details class="help"><summary>Map And Quests</summary><pre>- Map window won&#39;t drag: in Cinematic&#39;s &quot;Quality of life&quot; page, keep &quot;Drag windows to move them&quot;
+  ticked, and make sure OpenMapCineDrag is enabled. If it ever sticks after opening the map
+  full-screen, /reload with the map windowed.
+- Map stutters when zooming in very far: Minimap detail and Soften are already off in my
+  setup. If it still stutters, lower &quot;Deepest zoom&quot; in the OpenMap menu (mine is 96; it was
+  smooth below 20).
+- Vendor / flight master / quest icons show in places you haven&#39;t been:
+  Questie options &gt; Icons &gt; &quot;Hide Icons in Unexplored Areas&quot; must be ON
+  (Questie Fog, A setup helper, depends on it; capitals stay hidden until you walk in).
+  A character that already visited a capital before Questie Fog was installed has to walk in once more.
+- L for Questie&#39;s Journey window instead of Blizzard&#39;s quest log, paste once in chat:
+     /run SetBinding(&quot;L&quot;,&quot;QUESTIE_TOGGLE_JOURNEY&quot;) SaveBindings(GetCurrentBindingSet())
+  You still open a quest&#39;s full text by clicking it in the quest tracker.</pre></details>
+<details class="help"><summary>Chat, Loot, Campfires And Music</summary><pre>- Chat is Glass Forever (/glass): messages slide in and fade after a few seconds, and come
+  back when you point at the chat. Whispers open in their own tab. Each character keeps
+  its own chat history; none of mine comes with this setup. Interface: Shown keeps the
+  messages up. A setup helper GlassEditBoxFix stops a Cinematic error at login that Glass&#39;s
+  chat box would cause.
+- What you loot, and money and currency, show in a small feed on the left (RPGLootFeed,
+  /rlf to move or change it). XP and reputation are off in it. Its item prices come from
+  Auctionator, so without the Bags &amp; auction part they don&#39;t show.
+- Campfires (CozyFire): sitting, sleeping or kneeling at a campfire marks it on the map,
+  and camp objects&#39; tooltips show their buffs. It shares the campfires with your guild and
+  group. /cf mark marks one by hand. With the compass, A setup helper CompassCampfires puts
+  them on Compass Bar with their distance; switch it in the compass quick menu (/cqm).
+- Music (Forever Ambient Music Extended, /fame): keeps the game&#39;s music and silences, and
+  swaps some tracks for fitting ones from other WoW eras. /fame skip, /fame ban for a track
+  you don&#39;t like, /fame off to leave the music to the game. It plays on through fights:
+  Cinematic&#39;s own camera music is off so the two don&#39;t cut over each other.
+- Memory photos (BiS&gt;Memories, /bism; Journey &amp; memories part): a screenshot when something worth
+  keeping happens (level up, first boss kill, epic loot, a new zone, a candid one a week),
+  with a note of what it was. /bism lists them; pick which moments in /bism options. The
+  photos keep Cinematic&#39;s look (A setup helper BiSMemoriesCineLook), and Social Diary greeting
+  someone again gets one too (A setup helper DiaryMemories). The pictures are in
+  World of Warcraft\_forever_\Screenshots.
+
+
+VOICES (Spoken + Lore Forever)
+- Spoken narrates zones, books, quests and NPC chat. Lore Forever plays when you press its Play
+  button. The helper SpokenLoreBridge keeps them from talking over each other.
+- The one overlap left: pressing Play in Lore Forever while Spoken is talking. Wait for Spoken.
+- Spoken&#39;s subtitles don&#39;t show for quest/gossip text (the dialogue window already shows it);
+  places and bosses still get subtitles.
+- If the bridge prints a chat line saying it turned itself off, one of the two addons changed
+  after an update. Voices still work, they just may overlap.
+- Install.bat only brings my Lore Forever options and window place: your journey,
+  collection and everything you&#39;ve heard stay as they are.</pre></details>
+<details class="help"><summary>Nameplates, Target And Combat</summary><pre>(This is the &quot;Cinematic&quot; nameplates choice. With &quot;Original&quot; the game draws its own plates, the
+target frame is back, and the plate lines below don&#39;t apply; the last two still do.)
+- NPCs show names instead of plates; enemies get plates in combat (Cinematic&#39;s nameplate pages).
+- Targeting a friendly player shows their full plate (health and name), in or out of combat.
+  That&#39;s Cinematic&#39;s &quot;Your target&quot; rule on its Nameplates page. Outside cinematic mode the
+  game&#39;s own &quot;friendly player nameplates&quot; setting has to be on for it to have a plate to show.
+- Other friendly players who are fighting get a thin green health bar under their name (my
+  helper FriendlyFightBars). It stays off when you&#39;re in a group, and in dungeons and raids,
+  where the normal plates show, and on your target, which already has its full plate.
+- Your target gets a mark on its plate. Change its look in /cine &gt; Style hub &gt; Nameplates,
+  on the Target row: style (carets, brackets, glow, corners...), color, Moving, size.
+  /cine debug marks  tells you why a mark sits in the wrong place.
+- Your enemy target&#39;s buffs and debuffs show in a row above its plate (A setup helper
+  TargetPlateAuras), since the target frame is hidden.
+- Your target&#39;s plate also stands in for its target frame:
+  - a thin power bar under its health bar, with health and power numbers on it (A setup helper
+    TargetPlatePower). If the bar covers the plate&#39;s cast bar, tell me.
+  - right-click a friendly player&#39;s plate for the menu their frame would give (whisper,
+    invite, trade, inspect). On enemies and NPCs right-click still attacks or talks, so use
+    Shift+right-click there (A setup helper TargetPlateMenu). Plates only reach so far: bind a key
+    in Esc &gt; Options &gt; Key Bindings &gt; AddOns to open your target&#39;s menu at any range.
+- Your own frame and the target frame are cut down to name, health, power and cast bar (my
+  helper StrippedUnitFrames). It keeps hidden whatever Cinematic&#39;s Unit Frames page hides, so
+  change the parts there (/cine &gt; Unit Frames), then /reload. With your portrait hidden, its
+  icons sit on the health bar instead: combat swords or rest Zzz at its left, leader crown and
+  role along its top, raid group number at its top right.
+- No personal resource bars under your character, and the numbers stay on the bars: both are
+  game options, set by First Login Setup on each character&#39;s first login (unless you unticked
+  them under &quot;Game options&quot;). By hand:
+     /run SetCVar(&quot;nameplateShowSelf&quot;,&quot;0&quot;) SetCVar(&quot;statusText&quot;,&quot;1&quot;) SetCVar(&quot;statusTextDisplay&quot;,&quot;NUMERIC&quot;) SetCVar(&quot;interactOnLeftClick&quot;,&quot;0&quot;)
+  Numbers still only on hover? Cinematic&#39;s Unit Frames page: tick Always on the Bar numbers
+  row under You and under Target. Want percent too: statusTextDisplay &quot;BOTH&quot; instead of &quot;NUMERIC&quot;.
+  Type it with /run SetCVar(...) like above; /console didn&#39;t apply these for me.
+- Party members&#39; mana, energy and rage show under their health on the raid-style party frames:
+  First Login Setup turns this on once per character. Don&#39;t want them: Esc &gt; Options &gt;
+  Gameplay &gt; Interface &gt; Raid Frames &gt; untick Display Power Bars, and it stays off.
+- Left-clicking a friendly NPC you already target talks to it: that&#39;s the game&#39;s
+  &quot;Interact on Left Click&quot;, off unless you picked Left click: Interact (interactOnLeftClick 0;
+  1 turns it on).
+- &quot;+Combat&quot; / &quot;-Combat&quot; appears mid-screen when you enter or leave combat (A setup helper
+  CombatStateText). Too big or small: open
+    Interface\AddOns\CombatStateText\CombatStateText.lua
+  change the 32 on the SetTextHeight line (28 to 40 works well), then /reload.</pre></details>
+<details class="help"><summary>Performance</summary><pre>- My graphics are tuned in Cinematic&#39;s Graphics+ page for an RTX 3070 with a 72 FPS cap.
+  If your FPS drops, lower View distance, Clutter density/distance and Creature detail there first.
+- Ctrl+R shows the FPS counter.</pre></details>
+<details class="help"><summary>Errors</summary><pre>- BugSack (bug icon on the minimap) collects Lua errors. Send me a screenshot of one.
+- &quot;Interface action failed because of an addon&quot;: to find which one, type
+     /console taintLog 1
+  play until it happens again, /reload, then send me  World of Warcraft\_forever_\Logs\taint.log
+  Turn it off afterwards with  /console taintLog 0</pre></details>
+<details class="help"><summary>Don&#39;t Like It? Go Back (All The Way, Or To An Earlier Run, Or Some Parts)</summary><pre>Every install (right after &quot;Install now&quot;; a cancelled run changes nothing) first saves
+a snapshot of your setup as it was, in
+  World of Warcraft\_forever_\(setup backup folder)\Snapshots
+(the newest 10, plus always the one from before your first install).
+Double-click Uninstall.bat (same folder as Install.bat). It offers &quot;Remove the whole setup&quot;
+(back to before your first install), &quot;Go back to an earlier snapshot&quot; (you pick the date),
+&quot;Take out some parts&quot; and &quot;Put back your own settings for some addons&quot;.
+Going back (the whole setup, or a snapshot):
+  - puts back the settings files the setup writes, each character&#39;s addon list and Node Sight
+    settings, and your game options (the Interface/Controls kind, including any you changed
+    since), as they were then
+  - graphics and sound options are not touched
+  - Lore Forever: only your options and window place go back; your journey stays
+  - your progress since stays too: key bindings, macros, tracked quests, other addons&#39; settings
+  - puts A setup helper addons back as they were then (or removes them)
+  - lists the addons that weren&#39;t there then, so you can delete them in the CurseForge app,
+    and offers to delete any left over
+Taking out some parts (Quests &amp; map, Gathering, Bags &amp; auction, Lore Forever, ...) gives you your own
+settings for those back and removes their addons; the rest stays. A part you took out comes
+back with Install.bat (tick it in the parts list).
+Uninstall.bat saves a snapshot first too, so you can undo an undo.
+Installed before snapshots existed? &quot;Remove the whole setup&quot; then puts back your settings and
+addons from before your first install, but not the game options (change those in game).
+To reset only one addon instead, delete just its .lua file from
+  WTF\Account\&lt;your account&gt;\SavedVariables   (game closed).</pre></details><!-- /gen:help -->
+</section>
+</main>
+
+<footer class="wrap small">A private setup for friends. Not affiliated with Blizzard Entertainment or CurseForge.</footer>
+
+<script>
+// The big button downloads the ticked card's file.
+var big = document.getElementById('download'), label = document.getElementById('dl-name');
+function pick(r) { big.href = big.href.replace(/[^\/]+$/, r.value); label.textContent = r.getAttribute('data-name'); }
+document.getElementById('cards').addEventListener('change', function (e) { if (e.target.name === 'preset') pick(e.target); });
+var on = document.querySelector('input[name=preset]:checked'); if (on) pick(on);
+</script>
+</body>
+</html>
