@@ -242,6 +242,17 @@
   $('quiz-start').addEventListener('click', function () { quiz.hidden = false; A = {}; at = 0; ask(); quiz.querySelector('.q-opt').focus(); });
   $('quiz-start').parentNode.hidden = false;
 
+  // --- "Already installed?" buttons: Windows starts PowerShell twice before the window shows, so say it is on its way.
+  var starting = $('starting'), closeLater;
+  document.querySelectorAll('[data-starting]').forEach(function (a) {
+    a.addEventListener('click', function () {   // (the link itself still goes to Windows)
+      $('starting-what').textContent = a.getAttribute('data-starting');
+      if (!starting.open) starting.showModal();
+      clearTimeout(closeLater); closeLater = setTimeout(function () { starting.close(); }, 20000);
+    });
+  });
+  starting.addEventListener('click', function (e) { if (e.target === starting) starting.close(); });   // a click outside the box
+
   var on = document.querySelector('input[name=preset]:checked');
   choose(on ? on.getAttribute('data-name') : D.presets[0].n);
 })();

@@ -126,6 +126,14 @@ legend { color: var(--gold-2); font-family: var(--serif); padding: 0 .3rem; }
 .btn.ghost { background: transparent; color: var(--gold-2); }
 .btn:hover, .btn:focus-visible { filter: brightness(1.1); }
 
+.starting { max-width: min(30rem, calc(100vw - 32px)); background: var(--panel-2); color: var(--text); border: 1px solid var(--gold); border-radius: 14px; padding: 1.4rem 1.5rem 1.2rem; text-align: center; box-shadow: 0 20px 60px #000c; }
+.starting::backdrop { background: #000a; }
+.starting h3 { margin: .6rem 0 .5rem; font-size: 1.4rem; }
+.starting p { margin: 0 0 .7rem; }
+.starting form { margin: .4rem 0 0; }
+.spinner { width: 34px; height: 34px; margin: 0 auto; border-radius: 50%; border: 3px solid var(--line); border-top-color: var(--gold); animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
 /* parts and folds */
 details { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; margin: .5rem 0; }
 details[open] { border-color: #5a4630; }
@@ -194,4 +202,4 @@ footer { padding: 2.4rem 16px 3rem; text-align: center; }
 @media (max-width: 600px) {
   .big { font-size: 1.15rem; padding: .8rem 1.2rem; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } .spinner { animation-duration: 4s; } }
